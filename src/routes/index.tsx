@@ -42,7 +42,7 @@ function SentinelMark({ className = "h-9 w-9" }: { className?: string }) {
     <svg viewBox="0 0 36 36" fill="none" className={className} aria-hidden="true">
       <path
         d="M18 2.5 31 8v9.2c0 7.9-5.6 13.4-13 16.3C10.6 30.6 5 25.1 5 17.2V8L18 2.5Z"
-        stroke="var(--color-primary)"
+        stroke="currentColor"
         strokeWidth="2.2"
         strokeLinejoin="round"
       />
@@ -52,7 +52,7 @@ function SentinelMark({ className = "h-9 w-9" }: { className?: string }) {
       />
       <path
         d="M12.5 19.8 16.6 24l7-7"
-        stroke="var(--color-primary)"
+        stroke="currentColor"
         strokeWidth="2.2"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -63,13 +63,14 @@ function SentinelMark({ className = "h-9 w-9" }: { className?: string }) {
 
 function Wordmark({ dark = false }: { dark?: boolean }) {
   return (
-    <a href="#top" className="flex items-center gap-2.5">
+    <a
+      href="#top"
+      className={`flex items-center gap-2.5 ${
+        dark ? "text-primary-foreground" : "text-primary"
+      }`}
+    >
       <SentinelMark />
-      <span
-        className={`font-display text-lg font-semibold leading-none tracking-tight ${
-          dark ? "text-primary-foreground" : "text-primary"
-        }`}
-      >
+      <span className="font-display text-lg font-semibold leading-none tracking-tight">
         Sentinel
         <span className="block text-[0.6rem] font-medium tracking-[0.28em] uppercase opacity-70">
           Africa Consulting
