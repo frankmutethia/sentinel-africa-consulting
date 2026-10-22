@@ -112,8 +112,8 @@ function Navbar() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8">
-        <div className={scrolled ? "" : "drop-shadow-sm"}>
-          <Wordmark />
+        <div className={`transition-colors duration-500 ${scrolled ? "" : "text-primary-foreground"}`}>
+          <Wordmark dark={!scrolled} />
         </div>
 
         <nav className="hidden items-center gap-8 lg:flex">
