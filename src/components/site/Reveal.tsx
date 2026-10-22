@@ -23,9 +23,12 @@ export function Reveal({ children, className = "", delay = 0 }: RevealProps) {
     }
     const observer = new IntersectionObserver(
       (entries) => {
-        if (entries[0].isIntersecting) {
-          setVisible(true);
-          observer.disconnect();
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            setVisible(true);
+            observer.disconnect();
+            break;
+          }
         }
       },
       { threshold: 0.15, rootMargin: "0px 0px -40px 0px" },
