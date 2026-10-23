@@ -1,0 +1,278 @@
+/* Our SDG's Commitment page. `--goal` carries each goal's official UN colour. */
+
+.sdg-tiles {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+.sdg-tile {
+  position: relative;
+  display: flex;
+  aspect-ratio: 3 / 4;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 22px 20px;
+  border-radius: 18px;
+  background: var(--goal);
+  color: #fff;
+  box-shadow: 0 20px 50px #102d3e1f;
+  transition: transform 0.3s;
+}
+.sdg-tile:hover {
+  transform: translateY(-6px);
+}
+.sdg-tile-number {
+  position: absolute;
+  top: 14px;
+  left: 20px;
+  font-family: var(--font-display);
+  font-size: 56px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+.sdg-tile-name {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.sdg-intro {
+  border-bottom: 1px solid var(--line);
+}
+.sdg-intro-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 56px;
+  align-items: center;
+  padding-block: 64px;
+}
+.sdg-intro-text {
+  font-family: var(--font-display);
+  font-size: clamp(20px, 1.8vw, 26px);
+  line-height: 1.45;
+  letter-spacing: -0.02em;
+}
+
+/* Goal sections */
+.sdg-goal {
+  padding-block: 104px;
+}
+.sdg-goal:nth-of-type(even) {
+  background: var(--pale);
+}
+.sdg-goal-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: 72px;
+  align-items: center;
+}
+.sdg-goal.is-reversed .sdg-goal-photo {
+  order: 1;
+}
+.sdg-goal-photo {
+  position: relative;
+  max-width: 440px;
+}
+.sdg-goal-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 30px 80px #102d3e2e;
+}
+.sdg-goal-photo::before {
+  content: "";
+  position: absolute;
+  inset: 24px -18px -18px 24px;
+  z-index: -1;
+  border-radius: 20px;
+  background: var(--goal);
+  opacity: 0.18;
+}
+.sdg-goal-number {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  display: inline-flex;
+  width: 64px;
+  height: 64px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  background: var(--goal);
+  font-family: var(--font-display);
+  font-size: 30px;
+  font-weight: 600;
+  color: #fff;
+}
+.sdg-goal-copy h2 {
+  margin: 18px 0 20px;
+}
+.sdg-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: var(--goal);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #fff;
+}
+.sdg-panel {
+  display: grid;
+  gap: 14px;
+  margin-top: 28px;
+  padding: 26px 28px;
+  border-left: 4px solid var(--goal);
+  border-radius: 0 16px 16px 0;
+  background: #fff;
+  box-shadow: 0 16px 40px #102d3e0d;
+}
+.sdg-panel p {
+  font-size: 15px;
+  line-height: 1.75;
+  color: #3f525c;
+}
+
+/* Gender split bars */
+.sdg-split {
+  display: grid;
+  gap: 16px;
+  margin-top: 30px;
+  padding: 26px 28px;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 16px 40px #102d3e0d;
+}
+.sdg-split-legend {
+  display: flex;
+  gap: 18px;
+  font-size: 12px;
+  font-weight: 700;
+}
+.sdg-split-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+.sdg-split-legend span::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  background: currentColor;
+}
+.sdg-split .is-women {
+  color: var(--goal);
+}
+.sdg-split .is-men {
+  color: var(--navy);
+}
+.sdg-split-row dt {
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.sdg-split-bar {
+  display: flex;
+  overflow: hidden;
+  height: 30px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+}
+.sdg-split-bar span {
+  display: flex;
+  align-items: center;
+  padding-inline: 10px;
+  color: #fff;
+}
+.sdg-split-bar .is-women {
+  background: var(--goal);
+  color: #fff;
+}
+.sdg-split-bar .is-men {
+  justify-content: flex-end;
+  background: var(--navy);
+  color: #fff;
+}
+
+/* Reduced inequality commitments */
+.sdg-commitments {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 30px;
+}
+.sdg-commitments li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.55;
+}
+.sdg-commitments li > span {
+  display: inline-flex;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: var(--goal);
+  color: #fff;
+}
+
+@media (max-width: 1100px) {
+  .sdg-intro-layout,
+  .sdg-goal-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 40px;
+  }
+  .sdg-goal.is-reversed .sdg-goal-photo {
+    order: 0;
+  }
+  .sdg-tiles {
+    max-width: 560px;
+  }
+  .sdg-goal-photo {
+    max-width: 360px;
+  }
+}
+@media (max-width: 640px) {
+  .sdg-goal {
+    padding-block: 64px;
+  }
+  .sdg-intro-layout {
+    padding-block: 48px;
+  }
+  .sdg-tile {
+    padding: 14px 12px;
+  }
+  .sdg-tile-number {
+    left: 12px;
+    font-size: 38px;
+  }
+  .sdg-tile-name {
+    font-size: 10px;
+  }
+  .sdg-commitments {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .sdg-panel,
+  .sdg-split {
+    padding: 22px 20px;
+  }
+}

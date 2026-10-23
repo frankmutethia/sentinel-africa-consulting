@@ -1,0 +1,399 @@
+/* Rwanda DPP Registration page. Shared service blocks and the hero facts strip live in services.css. */
+
+.dpp-lead-title {
+  margin-bottom: 14px;
+  font-family: var(--font-display);
+  font-size: clamp(19px, 1.6vw, 23px);
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--navy);
+}
+.dpp-hero {
+  display: grid;
+  gap: 18px;
+}
+.dpp-hero > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  box-shadow: 0 24px 60px #102d3e26;
+}
+.dpp-hero .svc-hero-facts {
+  margin-top: 0;
+}
+.dpp-button-light {
+  background: #fff;
+  color: var(--navy);
+}
+.dpp-button-light:hover {
+  background: #effaf3;
+}
+
+/* Introduction strip */
+.dpp-intro {
+  border-bottom: 1px solid var(--line);
+}
+.dpp-intro-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 56px;
+  align-items: center;
+  padding-block: 64px;
+}
+.dpp-intro-text {
+  font-family: var(--font-display);
+  font-size: clamp(20px, 1.8vw, 26px);
+  line-height: 1.45;
+  letter-spacing: -0.02em;
+}
+
+/* The law */
+.dpp-law {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 72px;
+  align-items: center;
+}
+.dpp-law h2 {
+  margin-bottom: 24px;
+}
+.dpp-law-cards {
+  display: grid;
+  gap: 16px;
+}
+.dpp-article {
+  padding: 36px;
+  border-radius: 18px;
+  background: linear-gradient(120deg, #0d2634, #12405a);
+  color: #fff;
+}
+.dpp-article-icon {
+  display: inline-flex;
+  width: 52px;
+  height: 52px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  border-radius: 14px;
+  background: #18a94b33;
+  color: #8fd3a8;
+}
+.dpp-article .eyebrow {
+  margin-bottom: 14px;
+  color: #8fd3a8;
+}
+.dpp-article blockquote {
+  font-family: var(--font-display);
+  font-size: clamp(20px, 1.8vw, 25px);
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+}
+.dpp-warning {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 20px 24px;
+  border: 1px solid #f2c48d;
+  border-radius: 14px;
+  background: #fff6eb;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #7a4710;
+}
+.dpp-warning svg {
+  flex-shrink: 0;
+  color: #d97a12;
+}
+
+/* Who must register */
+.dpp-who {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+.dpp-who > li {
+  display: flex;
+}
+.dpp-who-card {
+  flex: 1;
+  padding: 36px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #fff;
+}
+.dpp-who-card > span {
+  display: inline-flex;
+  width: 56px;
+  height: 56px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  border-radius: 16px;
+  background: var(--navy);
+  color: #fff;
+}
+.dpp-who-card h3 {
+  margin-bottom: 10px;
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 600;
+}
+.dpp-who-card p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #3f525c;
+}
+
+/* Ascertain band with the published banner video */
+.dpp-ascertain {
+  background: linear-gradient(120deg, #0d2634, #12405a);
+  color: #fff;
+}
+.dpp-ascertain-layout {
+  display: grid;
+  gap: 48px;
+  padding-block: 96px;
+}
+.dpp-video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 1;
+  border-radius: 18px;
+  background: #0b1b30;
+  box-shadow: 0 30px 80px #00000040;
+}
+.dpp-ascertain-copy {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 56px;
+  align-items: start;
+}
+.dpp-ascertain .eyebrow {
+  color: #8fd3a8;
+}
+.dpp-ascertain-copy p:not(.eyebrow) {
+  margin-bottom: 28px;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #d4e1e6;
+}
+.dpp-ascertain .button {
+  max-width: 420px;
+  text-align: left;
+}
+
+/* How we help: four connected steps */
+.dpp-timeline {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+.dpp-timeline::before {
+  content: "";
+  position: absolute;
+  top: 26px;
+  right: 12%;
+  left: 12%;
+  height: 2px;
+  background: repeating-linear-gradient(90deg, var(--green) 0 10px, transparent 10px 18px);
+}
+.dpp-timeline > li {
+  display: flex;
+}
+.dpp-timeline-step {
+  flex: 1;
+  display: grid;
+  align-content: start;
+  justify-items: center;
+  gap: 12px;
+  text-align: center;
+}
+.dpp-timeline-marker {
+  position: relative;
+  display: inline-flex;
+  width: 54px;
+  height: 54px;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  background: var(--green);
+  color: #fff;
+  box-shadow: 0 0 0 1px var(--line);
+}
+.dpp-timeline-step small {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--blue);
+}
+.dpp-timeline-step p {
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--pale);
+  font-size: 15px;
+  line-height: 1.7;
+  color: #3f525c;
+}
+.dpp-five-days {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-top: 40px;
+  padding: 28px 32px;
+  border-radius: 18px;
+  background: #e8f6ee;
+}
+.dpp-five-days-badge {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 22px;
+  border-radius: 999px;
+  background: var(--green);
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+}
+.dpp-five-days-badge strong {
+  font-family: var(--font-display);
+  font-size: 28px;
+  line-height: 1;
+}
+.dpp-five-days p {
+  font-size: 16px;
+  line-height: 1.75;
+  color: #2c4a3a;
+}
+
+/* Documents */
+.dpp-documents-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 72px;
+  align-items: start;
+}
+.dpp-documents-copy {
+  position: sticky;
+  top: 140px;
+}
+.dpp-documents-copy h2 {
+  margin-bottom: 24px;
+}
+.dpp-partner {
+  margin-top: 22px;
+  padding-left: 18px;
+  border-left: 3px solid var(--green);
+  font-family: var(--font-display);
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--navy);
+}
+.dpp-documents {
+  padding: 36px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 24px 60px #102d3e0f;
+}
+.dpp-documents-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 600;
+}
+.dpp-documents li {
+  display: flex;
+  gap: 18px;
+  padding-block: 18px;
+  border-bottom: 1px solid var(--line);
+  font-size: 15px;
+  line-height: 1.65;
+  color: #3f525c;
+}
+.dpp-documents li:last-child {
+  border-bottom: 0;
+}
+.dpp-document-number {
+  display: inline-flex;
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #e8f6ee;
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--green);
+}
+.dpp-template {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: #e6f2f8;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--blue);
+}
+.dpp-documents li > div {
+  display: grid;
+  justify-items: start;
+}
+
+@media (max-width: 1100px) {
+  .dpp-intro-layout,
+  .dpp-law,
+  .dpp-documents-layout,
+  .dpp-ascertain-copy {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+  }
+  .dpp-documents-copy {
+    position: static;
+  }
+  .dpp-hero {
+    max-width: 640px;
+  }
+  .dpp-timeline {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 36px;
+  }
+  .dpp-timeline::before {
+    display: none;
+  }
+}
+@media (max-width: 640px) {
+  .dpp-intro-layout {
+    padding-block: 48px;
+  }
+  .dpp-ascertain-layout {
+    gap: 32px;
+    padding-block: 64px;
+  }
+  .dpp-who,
+  .dpp-timeline {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .dpp-who-card,
+  .dpp-article,
+  .dpp-documents {
+    padding: 26px 22px;
+  }
+  .dpp-five-days {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px 22px;
+  }
+}

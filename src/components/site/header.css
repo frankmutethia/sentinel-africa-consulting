@@ -1,0 +1,349 @@
+.restored-header .header-utility {
+  color: white;
+  background: #138b3f;
+}
+.restored-header .utility-inner {
+  min-height: 31px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 26px;
+}
+.restored-header .utility-services,
+.restored-header .utility-commerce {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+.restored-header .utility-commerce {
+  gap: 15px;
+}
+.restored-header .header-utility a {
+  font-size: 10px;
+  padding-block: 6px;
+}
+.restored-header .header-utility a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.restored-header .utility-mobile-tagline {
+  display: none;
+}
+/* A small outlined button, so the staff entrance is findable without competing with "Let’s talk". */
+.restored-header .header-utility a.staff-login {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 4px;
+  padding: 4px 11px;
+  border: 1px solid #ffffff80;
+  border-radius: 999px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    border-color 0.2s;
+}
+.restored-header .header-utility a.staff-login:hover {
+  color: #138b3f;
+  background: white;
+  border-color: white;
+  text-decoration: none;
+}
+.restored-header .desktop-nav {
+  gap: 21px;
+}
+.restored-header .nav-inner {
+  gap: 20px;
+}
+.restored-header .official-wordmark {
+  width: 210px;
+}
+.restored-header .nav-dropdown {
+  position: relative;
+}
+.restored-header .nav-dropdown-trigger {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding-block: 14px;
+  color: var(--navy);
+  font-size: 12px;
+  font-weight: 500;
+  background: none;
+  border: 0;
+  white-space: nowrap;
+}
+.restored-header .nav-dropdown-trigger svg {
+  transition: transform 0.2s;
+}
+.restored-header .is-open > .nav-dropdown-trigger {
+  color: var(--blue);
+}
+.restored-header .is-open > .nav-dropdown-trigger > svg {
+  transform: rotate(180deg);
+}
+.restored-header .nav-dropdown-panel {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: -20px;
+  z-index: 60;
+  width: 258px;
+  max-height: calc(100dvh - 160px);
+  overflow-y: auto;
+  padding: 9px;
+  border: 1px solid #dce5e8;
+  border-top: 2px solid var(--green);
+  border-radius: 7px;
+  background: white;
+  box-shadow: 0 14px 38px #102d3e1a;
+  animation: dropdown-in 0.18s ease-out;
+}
+.restored-header .nav-dropdown-panel[hidden] {
+  display: none;
+}
+.restored-header .nav-dropdown-panel a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 11px 13px;
+  border-radius: 4px;
+  font-size: 12px;
+  line-height: 1.5;
+  transition:
+    color 0.2s,
+    background 0.2s;
+}
+.restored-header .nav-dropdown-panel a::after {
+  display: none;
+}
+.restored-header .nav-dropdown-panel a svg {
+  color: #78939f;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.restored-header .nav-dropdown-panel a:hover,
+.restored-header .nav-dropdown-panel a:focus-visible {
+  background: #edf5f7;
+  color: var(--blue);
+}
+.restored-header .nav-dropdown-panel a:hover svg,
+.restored-header .nav-dropdown-panel a:focus-visible svg {
+  opacity: 1;
+}
+.restored-header .desktop-nav > .nav-dropdown:nth-last-child(-n + 2) .nav-dropdown-panel {
+  left: auto;
+  right: -16px;
+}
+.sentinel-site main section[id] {
+  scroll-margin-top: 120px;
+}
+@keyframes dropdown-in {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 1250px) {
+  .restored-header .desktop-nav {
+    gap: 16px;
+  }
+  .restored-header .nav-contact {
+    display: none;
+  }
+  .restored-header .official-wordmark {
+    width: 200px;
+  }
+}
+@media (min-width: 1121px) {
+  .restored-header .mobile-nav {
+    display: none;
+  }
+}
+@media (max-width: 1120px) {
+  .restored-header .desktop-nav,
+  .restored-header .nav-contact {
+    display: none;
+  }
+  .restored-header .menu-toggle {
+    display: flex;
+  }
+  .restored-header .nav-inner {
+    height: 72px;
+  }
+  .restored-header .utility-services {
+    gap: 16px;
+  }
+  .restored-header .header-utility a {
+    font-size: 9px;
+  }
+  .restored-header .mobile-nav {
+    max-height: calc(100dvh - 108px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+  .restored-header .mobile-nav .nav-dropdown-trigger {
+    width: 100%;
+    justify-content: space-between;
+    font-size: 14px;
+    padding-block: 14px;
+    border-bottom: 1px solid #dce5e8;
+  }
+  .restored-header .mobile-nav .nav-dropdown-panel {
+    position: static;
+    width: 100%;
+    max-height: none;
+    box-shadow: none;
+    border: none;
+    border-left: 2px solid var(--green);
+    border-radius: 0;
+    margin-block: 7px 12px;
+    padding: 3px 0 3px 10px;
+    background: #f4f8f9;
+  }
+  .restored-header .mobile-nav .nav-dropdown-panel a {
+    border: none;
+    padding: 11px;
+    font-size: 13px;
+  }
+  .restored-header .mobile-nav .nav-dropdown-panel a svg {
+    opacity: 1;
+  }
+  .restored-header .mobile-nav .mobile-contact {
+    color: #138b3f;
+    font-weight: 600;
+  }
+  .sentinel-site main section[id] {
+    scroll-margin-top: 110px;
+  }
+}
+@media (max-width: 900px) {
+  .restored-header .utility-services {
+    display: none;
+  }
+  .restored-header .utility-mobile-tagline {
+    display: block;
+    font-size: 9px;
+  }
+  .restored-header .utility-inner {
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .restored-header .utility-commerce {
+    gap: 13px;
+  }
+}
+/* Narrow phones: the tagline gives way so Shop, the icons and Staff Login stay on one line. */
+@media (max-width: 400px) {
+  .restored-header .utility-mobile-tagline {
+    display: none;
+  }
+  .restored-header .utility-inner {
+    justify-content: flex-end;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .restored-header .nav-dropdown-panel {
+    animation: none;
+  }
+}
+/* Pages that are not built yet stay in the menu without linking away. */
+.restored-header .nav-soon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  cursor: default;
+  color: #8a9ba3;
+}
+.restored-header .desktop-nav .nav-soon {
+  padding-block: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+/* The top bar has no room for the tag; the greyed label and tooltip carry it. */
+.restored-header .desktop-nav > .nav-soon small {
+  display: none;
+}
+.restored-header .nav-dropdown-panel .nav-soon {
+  padding: 11px 13px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.restored-header .nav-soon small {
+  padding: 1px 7px;
+  border-radius: 999px;
+  background: #edf5f7;
+  color: #5d7480;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.restored-header .header-utility [aria-disabled="true"] {
+  display: inline-flex;
+  font-size: 10px;
+  padding-block: 6px;
+  cursor: default;
+  opacity: 0.75;
+}
+@media (max-width: 1120px) {
+  .restored-header .mobile-nav .nav-soon.nav-direct-link {
+    font-size: 14px;
+    padding-block: 14px;
+    border-bottom: 1px solid var(--line);
+  }
+}
+
+/* "You are here": the menu holding the current page, and the page itself in its dropdown. */
+.restored-header .nav-dropdown.is-current > .nav-dropdown-trigger {
+  position: relative;
+  color: var(--blue);
+  font-weight: 700;
+}
+.restored-header .desktop-nav .nav-dropdown.is-current > .nav-dropdown-trigger::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 4px;
+  left: 0;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--green);
+}
+.restored-header .nav-dropdown-panel a[aria-current="page"] {
+  background: #e8f6ee;
+  color: var(--navy);
+  font-weight: 700;
+  box-shadow: inset 3px 0 0 var(--green);
+}
+
+/* Top-level page links: a "New" marker, and the same current-page underline as the menus. */
+.restored-header .nav-direct-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.restored-header .nav-badge {
+  padding: 2px 6px;
+  border-radius: 999px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #0f7a35;
+  background: #e5f6eb;
+}
+.restored-header .desktop-nav a.nav-direct-link[aria-current="page"] {
+  color: var(--blue);
+}
+.restored-header .desktop-nav a.nav-direct-link[aria-current="page"]::after {
+  transform: scaleX(1);
+}

@@ -1,0 +1,335 @@
+/* Training page. Shared service blocks and the hero facts strip live in services.css. */
+
+/* Hero */
+.training-accreditation {
+  display: grid;
+  gap: 16px;
+  margin-top: 22px;
+  padding: 18px 20px;
+  border-left: 3px solid var(--green);
+  border-radius: 0 12px 12px 0;
+  background: #ffffffb3;
+}
+.training-accreditation p {
+  font-size: 15px;
+  line-height: 1.65;
+}
+.training-accreditation-logos {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+.training-accreditation-logos img:first-child {
+  width: 110px;
+  height: auto;
+}
+.training-accreditation-logos img:last-child {
+  width: 38px;
+  height: auto;
+}
+.training-hero-media {
+  display: grid;
+  gap: 18px;
+}
+
+/* Course catalogue: tabs beside the selected area */
+.training-catalogue {
+  display: grid;
+  grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+  gap: 28px;
+  align-items: start;
+}
+.training-tabs {
+  display: grid;
+  gap: 10px;
+}
+.training-tabs button {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.35;
+  text-align: left;
+  color: var(--navy);
+  transition:
+    border-color 0.2s,
+    background 0.2s,
+    box-shadow 0.2s;
+}
+.training-tabs button:hover {
+  border-color: #087bb066;
+}
+.training-tabs button[aria-selected="true"] {
+  border-color: var(--navy);
+  background: var(--navy);
+  color: #fff;
+  box-shadow: 0 16px 40px #102d3e26;
+}
+.training-tabs img {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  padding: 4px;
+  border-radius: 10px;
+  background: #fff;
+  object-fit: contain;
+}
+.training-tabs small {
+  display: block;
+  margin-bottom: 2px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--green);
+}
+.training-tabs button[aria-selected="true"] small {
+  color: #8fd3a8;
+}
+.training-panel {
+  padding: 36px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--pale);
+}
+.training-panel[hidden] {
+  display: none;
+}
+.training-panel-head {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-bottom: 30px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--line);
+}
+.training-panel-head img {
+  width: 110px;
+  height: 110px;
+  flex-shrink: 0;
+  padding: 10px;
+  border-radius: 20px;
+  background: #fff;
+  object-fit: contain;
+}
+.training-panel-head h3 {
+  margin-bottom: 8px;
+  font-family: var(--font-display);
+  font-size: clamp(22px, 2vw, 28px);
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -0.03em;
+}
+.training-standards {
+  display: grid;
+  gap: 28px;
+}
+.training-standard {
+  margin-bottom: 14px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--blue);
+}
+.training-standard-block ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+}
+.training-standard-block li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+  font-size: 15px;
+  font-weight: 600;
+}
+.training-standard-block li svg {
+  flex-shrink: 0;
+  color: var(--green);
+}
+
+/* Calendar band */
+.training-calendar-band {
+  background: linear-gradient(120deg, #0f6a3a, #18a94b);
+  color: #fff;
+}
+.training-calendar-layout {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding-block: 56px;
+}
+.training-calendar-layout > div {
+  flex: 1;
+}
+.training-calendar-icon {
+  display: inline-flex;
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  background: #ffffff26;
+}
+.training-calendar-band .eyebrow {
+  margin-bottom: 10px;
+  color: #d6f5e1;
+}
+.training-calendar-band .eyebrow::before {
+  background: #fff;
+}
+.training-calendar-button {
+  background: #fff;
+  color: var(--navy);
+}
+.training-calendar-button:hover {
+  background: #effaf3;
+}
+
+/* Formats */
+.training-formats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+.training-formats > li {
+  display: flex;
+}
+.training-format {
+  flex: 1;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #fff;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+.training-format:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 60px #102d3e14;
+}
+.training-format-image {
+  display: flex;
+  height: 230px;
+  align-items: center;
+  justify-content: center;
+  padding: 22px;
+  background: #f7fbfc;
+}
+.training-format-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.training-format-label {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 20px 24px;
+  border-top: 1px solid var(--line);
+}
+.training-format-label span {
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: var(--navy);
+  color: #fff;
+}
+.training-format-label h3 {
+  font-family: var(--font-display);
+  font-size: 19px;
+  font-weight: 600;
+}
+.training-modes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 28px;
+}
+.training-modes span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  font-size: 14px;
+  font-weight: 600;
+}
+.training-modes svg {
+  color: var(--green);
+}
+
+/* Featured CDPO video and commitment */
+.training-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  gap: 64px;
+  align-items: center;
+}
+.training-feature h2 {
+  margin-bottom: 22px;
+}
+.training-commitment {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: 72px;
+}
+
+@media (max-width: 1100px) {
+  .training-catalogue,
+  .training-feature,
+  .training-commitment {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+  }
+  .training-tabs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .training-hero-media {
+    max-width: 640px;
+  }
+}
+@media (max-width: 900px) {
+  .training-formats {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .training-calendar-layout {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 640px) {
+  .training-tabs {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .training-panel {
+    padding: 22px;
+  }
+  .training-panel-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+  .training-panel-head img {
+    width: 84px;
+    height: 84px;
+  }
+}

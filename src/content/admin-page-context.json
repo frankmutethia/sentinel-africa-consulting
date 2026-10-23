@@ -1,0 +1,1813 @@
+{
+  "who-we-are": {
+    "hero": {
+      "trail": ["About Us"],
+      "eyebrow": "About Sentinel Africa",
+      "title": "Who We Are",
+      "lead": "A premier risk management consultancy firm, operating throughout Africa and beyond."
+    },
+    "media": {
+      "introVideo": "/src/assets/who-we-are/who-we-are.mp4",
+      "introPoster": "/src/assets/who-we-are/who-we-are-poster.jpg",
+      "coreValues": "/src/assets/who-we-are/core-values.png"
+    },
+    "sections": [
+      {
+        "id": "story",
+        "label": "Safeguarding your assets. Ensuring your long-term success.",
+        "headings": ["Safeguarding your assets. Ensuring your long-term success."],
+        "paragraphs": [
+          "Welcome",
+          "Welcome to Sentinel Africa Consulting, we are a premier Risk Management Consultancy firm operating throughout Africa and beyond. With our extensive expertise in Risk Management; Information Security, Business Continuity, Enterprise Risk, and Data Privacy & Protection, we are committed to safeguarding your organization’s assets and ensuring its long-term success.",
+          "Our commitment to excellence is reflected in our ISO/IEC 27001 ISMS and ISO/IEC 27701 PIMS certifications. Headquartered in Nairobi, Kenya, and with subsidiaries in Rwanda and Uganda, we have established a strong presence across the African region. Our team of experts possesses deep industry knowledge, enabling us to cater to a wide range of sectors in both the private and public domains."
+        ],
+        "lists": [],
+        "images": []
+      },
+      {
+        "id": "section-2",
+        "label": "Our Approach to Risk Management",
+        "headings": ["Our Approach to Risk Management", "Our Compass"],
+        "paragraphs": [
+          "At Sentinel Africa Consulting, we approach risk management with a dual focus: protecting your existing value and fostering its growth. We believe in understanding the unique needs of each client and developing tailored solutions to address their specific challenges. By implementing sustainable and continuously improving management systems, we ensure that risk management becomes an integral part of your organization’s DNA.",
+          "Our core values of Integrity & Ethics, Speed & Flexibility, Building Meaningful Relationships, and Working in the Trenches guide us in our service delivery. We are dedicated to assisting our clients in building better-run organizations and achieving their goals. Our ultimate vision is to become The Advisor of Choice, Your Advisor of choice by providing unparalleled guidance and support.",
+          "As you explore our website, we hope you discover the qualities that set us apart as an outstanding service provider and an exceptional place to build a career."
+        ],
+        "lists": [],
+        "images": []
+      },
+      {
+        "id": "values",
+        "label": "Infused into our service delivery. Guiding us every step of the way.",
+        "headings": ["Infused into our service delivery. Guiding us every step of the way."],
+        "paragraphs": [
+          "Our core values",
+          "Our Core Values are infused into our service delivery. They guide us every step of the way."
+        ],
+        "lists": [
+          {
+            "key": "values",
+            "items": [
+              {
+                "name": "Integrity & Ethics",
+                "tone": "yellow"
+              },
+              {
+                "name": "Speed & Flexibility",
+                "tone": "teal"
+              },
+              {
+                "name": "Building Meaningful Relationships",
+                "tone": "orange"
+              },
+              {
+                "name": "Working in the Trenches",
+                "tone": "blue"
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "src": "/src/assets/who-we-are/core-values.png",
+            "alt": "Our core values: Building Meaningful Relationships, Integrity & Ethics, Speed & Flexibility, and Working in the Trenches"
+          }
+        ]
+      }
+    ],
+    "constants": {
+      "facts": [
+        {
+          "label": "Certified",
+          "value": "ISO/IEC 27001 ISMS · ISO/IEC 27701 PIMS"
+        },
+        {
+          "label": "Headquarters",
+          "value": "Nairobi, Kenya"
+        },
+        {
+          "label": "Subsidiaries",
+          "value": "Rwanda and Uganda"
+        },
+        {
+          "label": "Sectors",
+          "value": "Private and public domains"
+        }
+      ],
+      "values": [
+        {
+          "name": "Integrity & Ethics",
+          "tone": "yellow"
+        },
+        {
+          "name": "Speed & Flexibility",
+          "tone": "teal"
+        },
+        {
+          "name": "Building Meaningful Relationships",
+          "tone": "orange"
+        },
+        {
+          "name": "Working in the Trenches",
+          "tone": "blue"
+        }
+      ]
+    }
+  },
+  "how-we-do-it": {
+    "hero": {
+      "trail": ["About Us"],
+      "eyebrow": "Our methodology",
+      "title": "How We Do It",
+      "lead": "At Sentinel Africa Consulting, we excel in delivering customized solutions by deeply understanding our client’s unique context and scope. Our approach revolves around tailoring our services to address their specific needs and seamlessly integrating these solutions into their organizations."
+    },
+    "media": {},
+    "sections": [
+      {
+        "id": "steps",
+        "label": "Understand. Tailor. Embed.",
+        "headings": ["Understand. Tailor. Embed."],
+        "paragraphs": [
+          "Our approach",
+          "Three steps that turn risk management into part of how your organization works."
+        ],
+        "lists": [
+          {
+            "key": "steps",
+            "items": [
+              {
+                "number": "01",
+                "name": "Understand",
+                "tone": "understand",
+                "text": "We comprehensively analyze our client’s operations, goals, and challenges to achieve this. We collaborate closely with their teams to understand their business environment, industry regulations, and risk landscape. This allows us to develop a holistic perspective that enables us to identify potential vulnerabilities and opportunities for improvement."
+              },
+              {
+                "number": "02",
+                "name": "Tailor",
+                "tone": "tailor",
+                "text": "Drawing on our extensive expertise in risk management, we design strategies and frameworks that align with our client’s objectives. Our solutions are not only effective but also practical, taking into account the unique characteristics and requirements of each organization."
+              },
+              {
+                "number": "03",
+                "name": "Embed",
+                "tone": "embed",
+                "text": "We go beyond providing recommendations and guidance. Our dedicated team works hand in hand with our clients to ensure the successful implementation and integration of the proposed solutions. We provide ongoing support, training, and monitoring to empower our client’s internal teams and foster a culture of risk awareness and proactive management."
+              }
+            ]
+          }
+        ],
+        "images": []
+      },
+      {
+        "id": "commitment",
+        "label": "Collaboration, transparency and open communication.",
+        "headings": ["Collaboration, transparency and open communication."],
+        "paragraphs": [
+          "At every step",
+          "At every step, we prioritize collaboration, transparency, and open communication. By building strong relationships with our clients, we establish a foundation of trust that enables us to deliver sustainable and long-lasting results.",
+          "Through our client-centric approach and unwavering commitment to excellence, we help organizations fortify their risk management practices, enhance information security, ensure business continuity, and safeguard data privacy & protection."
+        ],
+        "lists": [],
+        "images": []
+      }
+    ],
+    "constants": {
+      "steps": [
+        {
+          "number": "01",
+          "name": "Understand",
+          "tone": "understand",
+          "text": "We comprehensively analyze our client’s operations, goals, and challenges to achieve this. We collaborate closely with their teams to understand their business environment, industry regulations, and risk landscape. This allows us to develop a holistic perspective that enables us to identify potential vulnerabilities and opportunities for improvement."
+        },
+        {
+          "number": "02",
+          "name": "Tailor",
+          "tone": "tailor",
+          "text": "Drawing on our extensive expertise in risk management, we design strategies and frameworks that align with our client’s objectives. Our solutions are not only effective but also practical, taking into account the unique characteristics and requirements of each organization."
+        },
+        {
+          "number": "03",
+          "name": "Embed",
+          "tone": "embed",
+          "text": "We go beyond providing recommendations and guidance. Our dedicated team works hand in hand with our clients to ensure the successful implementation and integration of the proposed solutions. We provide ongoing support, training, and monitoring to empower our client’s internal teams and foster a culture of risk awareness and proactive management."
+        }
+      ]
+    }
+  },
+  "why-we-do-it": {
+    "hero": {
+      "trail": ["About Us"],
+      "eyebrow": "Our purpose",
+      "title": "Why We Do It",
+      "lead": "Sentinel Africa Consulting was born out of a fervent desire to redefine risk management as a powerful and invaluable discipline. Having experienced both the misconceptions and the true value of risk management during their tenure in various corporate settings, the founders of this organization were driven to make a lasting impact."
+    },
+    "media": {
+      "missionArt": "/src/assets/why-we-do-it/mission.png",
+      "visionArt": "/src/assets/why-we-do-it/vision.png",
+      "teamPhoto": "/src/assets/why-we-do-it/team.jpg"
+    },
+    "sections": [
+      {
+        "id": "story",
+        "label": "Born from practice. Driven to make a lasting impact.",
+        "headings": ["Born from practice. Driven to make a lasting impact."],
+        "paragraphs": [
+          "Our story",
+          "In their roles as Risk Management practitioners, they witnessed the reluctance of some business managers who perceived risk management as an impediment to growth and an overly restrictive process. This perception sparked the founders’ aspiration to educate and evangelize the essence of risk management across organizations of all kinds.",
+          "Their day-to-day work fueled their passion to demystify the value proposition of effective risk management, aiming to empower individuals from diverse backgrounds to embrace its principles. Rather than imposing predefined risk assessments, the founders championed a participatory approach that benefits both organizations and consultants. This approach involves collaboratively uncovering the most fundamental risk areas and fully embracing the life cycle of risk management to unlock the true benefits of an embedded risk management framework."
+        ],
+        "lists": [],
+        "images": []
+      },
+      {
+        "id": "purpose",
+        "label": "We are in the business of helping our clients create and protect value.",
+        "headings": [
+          "We are in the business of helping our clients create and protect value.",
+          "To be the Advisor of Choice"
+        ],
+        "paragraphs": [
+          "Our mission",
+          "This involves understanding the client’s unique issues, tailoring solutions to resolve those issues, and embedding a sustainable and continuously improving management system within the entity.",
+          "Our vision",
+          "Our purpose at Sentinel Africa is to help our clients to build better-run companies. To make our clients win!"
+        ],
+        "lists": [],
+        "images": [
+          {
+            "src": "/src/assets/why-we-do-it/mission.png",
+            "alt": "Mission illustration"
+          },
+          {
+            "src": "/src/assets/why-we-do-it/vision.png",
+            "alt": "Vision illustration"
+          }
+        ]
+      },
+      {
+        "id": "commitment",
+        "label": "A partner in your risk management journey.",
+        "headings": ["A partner in your risk management journey."],
+        "paragraphs": [
+          "Our commitment",
+          "Sentinel Africa Consulting stands firm in its commitment to being a partner in your risk management journey. We understand that each organization has unique challenges, and we are dedicated to providing tailored solutions that empower you to navigate uncertainty with confidence. Our mission is to equip you with the knowledge and tools to proactively identify, assess, and mitigate risks, ensuring a path to sustainable growth and success.",
+          "Welcome to a consultancy experience where risk management becomes an enabler rather than a constraint. At Sentinel Africa, we are passionate about creating a culture of risk intelligence, empowering you to embrace risks as opportunities and build a resilient future for your organization. Together, let us unlock the true potential of risk management and embrace a future of informed decisions and sustainable growth."
+        ],
+        "lists": [],
+        "images": [
+          {
+            "src": "/src/assets/why-we-do-it/team.jpg",
+            "alt": "The Sentinel Africa Consulting team"
+          }
+        ]
+      }
+    ],
+    "constants": {}
+  },
+  "board": {
+    "hero": {
+      "trail": ["About Us"],
+      "eyebrow": "Leadership",
+      "title": "Our Board",
+      "lead": "The directors who guide Sentinel Africa Consulting’s strategy, governance and long-term direction."
+    },
+    "media": {},
+    "sections": [
+      {
+        "id": "directors",
+        "label": "Experience that guides. Governance you can trust.",
+        "headings": ["Experience that guides. Governance you can trust."],
+        "paragraphs": ["Board of directors"],
+        "lists": [],
+        "images": []
+      }
+    ],
+    "constants": {}
+  },
+  "team": {
+    "hero": {
+      "trail": ["About Us"],
+      "eyebrow": "Our people",
+      "title": "Our Team",
+      "lead": "The practitioners who lead Sentinel Africa’s work with clients, in Africa and beyond."
+    },
+    "media": {},
+    "sections": [
+      {
+        "id": "members",
+        "label": "Deep expertise. Working in the trenches with you.",
+        "headings": ["Deep expertise. Working in the trenches with you."],
+        "paragraphs": ["Our team"],
+        "lists": [],
+        "images": []
+      },
+      {
+        "id": "profiles",
+        "label": "Get to know the team.",
+        "headings": ["Get to know the team."],
+        "paragraphs": ["Profiles"],
+        "lists": [],
+        "images": []
+      }
+    ],
+    "constants": {}
+  },
+  "consultancy": {
+    "hero": {
+      "trail": ["Our Services"],
+      "eyebrow": "Short-term Implementations Advisory",
+      "title": "Consultancy",
+      "lead": "Our consultancy services offer expert guidance and advisory on a wide range of projects and challenges."
+    },
+    "media": {
+      "heroArt": "/src/assets/services/consultancy-hero.png",
+      "teamPhotoOne": "/src/assets/services/consultancy-team-1.jpg",
+      "teamPhotoTwo": "/src/assets/services/consultancy-team-2.jpg"
+    },
+    "sections": [
+      {
+        "id": "section-1",
+        "label": "What our consultancy delivers",
+        "headings": [],
+        "paragraphs": [
+          "With a team of seasoned professionals, we provide tailored solutions to address your specific needs. From risk management to process improvement, our short-term implementations are designed to deliver tangible results, boost efficiency, and enhance your organization’s overall performance."
+        ],
+        "lists": [
+          {
+            "key": "outcomes",
+            "items": [
+              {
+                "title": "Tangible results"
+              },
+              {
+                "title": "Boosted efficiency"
+              },
+              {
+                "title": "Enhanced overall performance"
+              }
+            ]
+          }
+        ],
+        "images": []
+      },
+      {
+        "id": "view",
+        "label": "Our view on risk management is two-fold:",
+        "headings": ["Our view on risk management is two-fold:"],
+        "paragraphs": ["Our vision"],
+        "lists": [],
+        "images": []
+      },
+      {
+        "id": "method",
+        "label": "Understand. Tailor.",
+        "headings": ["Understand. Tailor."],
+        "paragraphs": [
+          "Our modus operandi",
+          "And as such we have defined a modus operandi for carrying out our activities; Understand, Tailor, Embed in your environment. Sentinel Africa has a large pool of industry-experienced consultants who help our customers develop strategies, policies, or documentation that will help achieve their corporate objectives."
+        ],
+        "lists": [
+          {
+            "key": "method",
+            "items": [
+              {
+                "step": "Understand",
+                "caption": "Your unique context and scope",
+                "tone": "understand"
+              },
+              {
+                "step": "Tailor",
+                "caption": "Solutions shaped to your specific needs",
+                "tone": "tailor"
+              },
+              {
+                "step": "Embed",
+                "caption": "Integrated into your environment",
+                "tone": "embed"
+              }
+            ]
+          }
+        ],
+        "images": []
+      },
+      {
+        "id": "standards",
+        "label": "Implementation of",
+        "headings": ["Implementation of"],
+        "paragraphs": ["What we implement"],
+        "lists": [
+          {
+            "key": "standards",
+            "items": [
+              {
+                "title": "Information Security Standards"
+              },
+              {
+                "title": "Business Continuity Standards"
+              },
+              {
+                "title": "Risk Management Standards"
+              },
+              {
+                "title": "Data Privacy Standards"
+              },
+              {
+                "title": "GSMA Standards"
+              }
+            ]
+          }
+        ],
+        "images": []
+      },
+      {
+        "id": "documents",
+        "label": "Customized to your unique requirements.",
+        "headings": ["Customized to your unique requirements."],
+        "paragraphs": [
+          "Strategy documents and processes",
+          "At Sentinel Africa Consulting, we partner with organizations to develop a comprehensive suite of strategy documents and processes that are customized to their unique requirements. By thoroughly understanding their scope and specific needs, we tailor these solutions to provide maximum impact and value. Our expert team assists in implementing these strategies within the organization’s existing culture, fostering impactful and sustainable change. Some of the key strategy documents and processes we help organizations develop include:"
+        ],
+        "lists": [],
+        "images": []
+      },
+      {
+        "id": "change",
+        "label": "Personalized and adaptive strategies.",
+        "headings": ["Personalized and adaptive strategies."],
+        "paragraphs": [
+          "Impactful change",
+          "At Sentinel Africa Consulting, we believe that impactful change starts with personalized and adaptive strategies. By understanding each organization’s needs and tailoring our solutions accordingly, we empower them to thrive in an ever-evolving landscape of risk management.",
+          "Request a call back from our experts today to provide you with guidance on how to implement and audit different Management System or start on different Risk management projects."
+        ],
+        "lists": [],
+        "images": [
+          {
+            "src": "/src/assets/services/consultancy-team-1.jpg",
+            "alt": "Sentinel Africa consultants at work"
+          },
+          {
+            "src": "/src/assets/services/consultancy-team-2.jpg",
+            "alt": "Sentinel Africa consultants reviewing work together"
+          }
+        ]
+      }
+    ],
+    "constants": {
+      "standards": [
+        {
+          "title": "Information Security Standards"
+        },
+        {
+          "title": "Business Continuity Standards"
+        },
+        {
+          "title": "Risk Management Standards"
+        },
+        {
+          "title": "Data Privacy Standards"
+        },
+        {
+          "title": "GSMA Standards"
+        }
+      ],
+      "outcomes": [
+        {
+          "title": "Tangible results"
+        },
+        {
+          "title": "Boosted efficiency"
+        },
+        {
+          "title": "Enhanced overall performance"
+        }
+      ],
+      "method": [
+        {
+          "step": "Understand",
+          "caption": "Your unique context and scope",
+          "tone": "understand"
+        },
+        {
+          "step": "Tailor",
+          "caption": "Solutions shaped to your specific needs",
+          "tone": "tailor"
+        },
+        {
+          "step": "Embed",
+          "caption": "Integrated into your environment",
+          "tone": "embed"
+        }
+      ],
+      "documentGroups": [
+        {
+          "name": "Policies and response plans",
+          "items": [
+            {
+              "title": "Tailored Information Security Policy",
+              "text": "We create bespoke information security policies that align with the organization’s operations and risks, ensuring data protection and secure practices."
+            },
+            {
+              "title": "Customized Data Protection and Privacy Policy",
+              "text": "Our team crafts policies and procedures that comply with relevant regulations and reflect the organization’s commitment to safeguarding personal information."
+            },
+            {
+              "title": "Personalized Business Continuity Plan (BCP)",
+              "text": "We design BCPs that cater to the organization’s critical processes, helping them swiftly recover from disruptive incidents and ensure uninterrupted operations."
+            },
+            {
+              "title": "Tailor-Made Incident Response Plan (IRP)",
+              "text": "Our IRPs are uniquely designed to address the organization’s specific cybersecurity incidents, enabling swift and effective response and recovery."
+            },
+            {
+              "title": "Personalized Data Breach Response Plan",
+              "text": "We develop data breach response plans that fit the organization’s specific requirements, guiding them in handling and notifying affected parties."
+            },
+            {
+              "title": "Customized Disaster Recovery Plan (DRP)",
+              "text": "Our DRPs are tailored to the organization’s critical systems and data, ensuring they can effectively recover from disasters."
+            }
+          ]
+        },
+        {
+          "name": "Risk, governance and compliance",
+          "items": [
+            {
+              "title": "Customized Risk Management Framework",
+              "text": "We develop risk management frameworks that are tailored to the organization’s risk appetite, identifying and mitigating risks in a way that suits their culture."
+            },
+            {
+              "title": "Individualized Risk Assessment and Analysis",
+              "text": "Our risk assessments identify unique threats and vulnerabilities relevant to the organization, enabling proactive risk mitigation."
+            },
+            {
+              "title": "Bespoke Compliance Framework and Processes",
+              "text": "We help organizations establish compliance frameworks aligned with their specific industry standards and regulations, ensuring seamless compliance."
+            },
+            {
+              "title": "Unique Third-Party Risk Management Procedures",
+              "text": "We assist in assessing and managing risks associated with third-party vendors, adapting processes to the organization’s context."
+            },
+            {
+              "title": "Personalized Governance, Risk, and Compliance (GRC) Framework",
+              "text": "Our GRC frameworks integrate with the organization’s governance structure, optimizing oversight and decision-making."
+            }
+          ]
+        },
+        {
+          "name": "Security operations and culture",
+          "items": [
+            {
+              "title": "Custom Security Awareness and Training Programs",
+              "text": "Our training programs are designed to resonate with the organization’s employees, fostering a security-aware culture."
+            },
+            {
+              "title": "Uniquely Crafted Security Architecture and Design",
+              "text": "We offer tailored security architectures aligned with the organization’s needs and objectives."
+            },
+            {
+              "title": "Custom Security Incident Management Procedures",
+              "text": "Our procedures reflect the organization’s operational environment, ensuring effective handling of security incidents."
+            },
+            {
+              "title": "Personalized Security Metrics and Reporting",
+              "text": "We develop metrics and reporting mechanisms that are meaningful to the organization, enabling informed decisions and accountability."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "managed-services": {
+    "hero": {
+      "trail": ["Our Services"],
+      "eyebrow": "Retainers – Long-term Managed Consultancy Services",
+      "title": "Managed Services",
+      "lead": "Welcome to our Managed Consultancy Services, where we understand the challenges faced by Corporates, SMEs, Ministries, Governments, and Agencies in effectively managing their risk functions."
+    },
+    "media": {
+      "heroArt": "/src/assets/services/managed-hero.jpg",
+      "teamPhoto": "/src/assets/services/managed-team.jpg"
+    },
+    "sections": [
+      {
+        "id": "gap",
+        "label": "Bridging the gap in risk management capacity.",
+        "headings": ["Bridging the gap in risk management capacity."],
+        "paragraphs": [
+          "The capacity gap",
+          "Research shows that 80% of SMEs lack sufficient capacity in risk management disciplines, while 70% of government entities lack the right skill base to implement risk management adequately. To bridge this gap, we offer to be your outsourced managed service risk provider, delivering specialized solutions in information security, data protection, risk management, and business continuity."
+        ],
+        "lists": [],
+        "images": []
+      },
+      {
+        "id": "benefits",
+        "label": "Our Managed Consultancy Services",
+        "headings": ["Our Managed Consultancy Services"],
+        "paragraphs": ["Benefits"],
+        "lists": [
+          {
+            "key": "benefits",
+            "items": [
+              {
+                "title": "Expertise",
+                "text": "By partnering with us, you gain access to a team of trained experts who will make your risk management programs effective. We provide the needed assurance to your stakeholders that your critical risks are being managed efficiently."
+              },
+              {
+                "title": "Stability",
+                "text": "We manage people-related disruptions that may affect your key programs, ensuring staff availability and uninterrupted support."
+              },
+              {
+                "title": "Visibility",
+                "text": "With our services, you can have adequate visibility and tracking of your risk management progress, enabling you to assess where you stand and the improvements made over time."
+              },
+              {
+                "title": "Cost Control",
+                "text": "Our cost-effective solutions help you manage operational and administrative costs related to people and tools, allowing you to optimize your resources."
+              }
+            ]
+          }
+        ],
+        "images": []
+      },
+      {
+        "id": "capabilities",
+        "label": "Unique capabilities,",
+        "headings": ["Unique capabilities,", "Cyber Shield"],
+        "paragraphs": [
+          "Capabilities",
+          "Featured capability",
+          "Our comprehensive cybersecurity offering provides a shield of protection against cyber threats, bolstering your cybersecurity posture."
+        ],
+        "lists": [
+          {
+            "key": "capabilities",
+            "items": [
+              {
+                "title": "Data Protection as a Service",
+                "text": "We help you build and maintain a robust data protection framework, ensuring compliance with data privacy regulations."
+              },
+              {
+                "title": "Information Security as a Service",
+                "text": "Our experts design and implement comprehensive information security measures to protect your critical assets."
+              },
+              {
+                "title": "Enterprise Risk as a Service",
+                "text": "We assist in developing and managing a holistic enterprise risk management approach, mitigating potential risks and enhancing organizational resilience."
+              },
+              {
+                "title": "Business Continuity as a Service",
+                "text": "Our services include developing and maintaining business continuity plans to ensure your business can recover swiftly from disruptions."
+              }
+            ]
+          }
+        ],
+        "images": []
+      },
+      {
+        "id": "help",
+        "label": "We help you:",
+        "headings": ["We help you:"],
+        "paragraphs": [
+          "Your trusted partner",
+          "At Sentinel Africa, we are committed to delivering tailored and long-term solutions to augment your risk function and address your organization’s growing needs.",
+          "Make us your trusted partner in managing your risk landscape efficiently and effectively, empowering you to focus on achieving your strategic objectives with confidence."
+        ],
+        "lists": [
+          {
+            "key": "engagements",
+            "items": [
+              {
+                "label": "Build",
+                "text": "Develop or expand your risk function focused on our core disciplines info security, data protection, risk, and Business Continuity"
+              },
+              {
+                "label": "Augment",
+                "text": "Augment existing resources especially where the growing needs of the organizational context demand it"
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "src": "/src/assets/services/managed-team.jpg",
+            "alt": "A Sentinel Africa consultant on a client call"
+          }
+        ]
+      }
+    ],
+    "constants": {
+      "audiences": [
+        {
+          "name": "Corporates"
+        },
+        {
+          "name": "SMEs"
+        },
+        {
+          "name": "Ministries"
+        },
+        {
+          "name": "Governments"
+        },
+        {
+          "name": "Agencies"
+        }
+      ],
+      "benefits": [
+        {
+          "title": "Expertise",
+          "text": "By partnering with us, you gain access to a team of trained experts who will make your risk management programs effective. We provide the needed assurance to your stakeholders that your critical risks are being managed efficiently."
+        },
+        {
+          "title": "Stability",
+          "text": "We manage people-related disruptions that may affect your key programs, ensuring staff availability and uninterrupted support."
+        },
+        {
+          "title": "Visibility",
+          "text": "With our services, you can have adequate visibility and tracking of your risk management progress, enabling you to assess where you stand and the improvements made over time."
+        },
+        {
+          "title": "Cost Control",
+          "text": "Our cost-effective solutions help you manage operational and administrative costs related to people and tools, allowing you to optimize your resources."
+        }
+      ],
+      "capabilities": [
+        {
+          "title": "Data Protection as a Service",
+          "text": "We help you build and maintain a robust data protection framework, ensuring compliance with data privacy regulations."
+        },
+        {
+          "title": "Information Security as a Service",
+          "text": "Our experts design and implement comprehensive information security measures to protect your critical assets."
+        },
+        {
+          "title": "Enterprise Risk as a Service",
+          "text": "We assist in developing and managing a holistic enterprise risk management approach, mitigating potential risks and enhancing organizational resilience."
+        },
+        {
+          "title": "Business Continuity as a Service",
+          "text": "Our services include developing and maintaining business continuity plans to ensure your business can recover swiftly from disruptions."
+        }
+      ],
+      "engagements": [
+        {
+          "label": "Build",
+          "text": "Develop or expand your risk function focused on our core disciplines info security, data protection, risk, and Business Continuity"
+        },
+        {
+          "label": "Augment",
+          "text": "Augment existing resources especially where the growing needs of the organizational context demand it"
+        }
+      ]
+    }
+  },
+  "training": {
+    "hero": {
+      "trail": ["Our Services"],
+      "eyebrow": "Book Both Public and In-house – Physical, Virtual, or Self Study",
+      "title": "Training",
+      "lead": "We offer a diverse range of certification and awareness training programs to empower organizations and professionals with the knowledge and expertise they need to excel in today’s dynamic business environment. As an affiliated training center with renowned certification bodies such as PECB, and Certi-Trust, we ensure that our training is of the highest quality, globally recognized, and aligned with industry standards."
+    },
+    "media": {
+      "physicalArt": "/src/assets/services/format-physical.jpg",
+      "virtualArt": "/src/assets/services/format-virtual.jpg",
+      "selfStudyArt": "/src/assets/services/format-self-study.jpg",
+      "classVideoPoster": "/src/assets/services/video-cdpo-class.jpg",
+      "upcomingVideoPoster": "/src/assets/services/video-cdpo-upcoming.jpg",
+      "pecbLogo": "/src/assets/logos/PECB.png",
+      "certiTrustLogo": "/src/assets/logos/HD_Certi-Trust_Logo-Squared-Transparent-1_opt-3.png",
+      "trainingCalendar": "/src/assets/services/sati-training-calendar-2026.pdf"
+    },
+    "sections": [
+      {
+        "id": "courses",
+        "label": "From engaging sessions to practical knowledge-sharing,",
+        "headings": ["From engaging sessions to practical knowledge-sharing,"],
+        "paragraphs": ["Certification programmes"],
+        "lists": [],
+        "images": []
+      },
+      {
+        "id": "calendar",
+        "label": "Our Training Calendar",
+        "headings": ["Our Training Calendar"],
+        "paragraphs": ["Plan ahead"],
+        "lists": [],
+        "images": []
+      },
+      {
+        "id": "formats",
+        "label": "Learn in the format",
+        "headings": ["Learn in the format"],
+        "paragraphs": ["Our Training Formats"],
+        "lists": [
+          {
+            "key": "formats",
+            "items": [
+              {
+                "title": "Physical Instructor-Led",
+                "image": "/src/assets/services/format-physical.jpg"
+              },
+              {
+                "title": "Virtual Instructor-Led",
+                "image": "/src/assets/services/format-virtual.jpg"
+              },
+              {
+                "title": "Self-Study",
+                "image": "/src/assets/services/format-self-study.jpg"
+              }
+            ]
+          }
+        ],
+        "images": []
+      },
+      {
+        "id": "cdpo",
+        "label": "Become a Certified Data Protection Officer.",
+        "headings": ["Become a Certified Data Protection Officer."],
+        "paragraphs": [
+          "Upcoming training",
+          "Learn the Data protection act Kenya - Become a Certified Data Protection Officer - CDPO Training."
+        ],
+        "lists": [],
+        "images": []
+      },
+      {
+        "id": "commitment",
+        "label": "Continuous improvement and professional growth.",
+        "headings": ["Continuous improvement and professional growth."],
+        "paragraphs": [
+          "Our commitment",
+          "At Sentinel Africa, we are committed to empowering professionals and organizations with the skills and knowledge they need to excel in their domains. Our expert trainers bring a wealth of experience to the classroom, ensuring an engaging and impactful learning experience. Join us on a journey of continuous improvement and professional growth, and let our comprehensive training programs propel you toward success in your chosen field."
+        ],
+        "lists": [],
+        "images": []
+      }
+    ],
+    "constants": {
+      "formats": [
+        {
+          "title": "Physical Instructor-Led",
+          "image": "/src/assets/services/format-physical.jpg"
+        },
+        {
+          "title": "Virtual Instructor-Led",
+          "image": "/src/assets/services/format-virtual.jpg"
+        },
+        {
+          "title": "Self-Study",
+          "image": "/src/assets/services/format-self-study.jpg"
+        }
+      ]
+    }
+  },
+  "cybershield": {
+    "hero": {
+      "trail": ["Our Services"],
+      "eyebrow": "24/7 monitoring, detection, analysis and response",
+      "title": "Cybershield",
+      "lead": "Our Cybershield service plays a pivotal role in “24/7” monitoring, detection, analysis, and response to security incidents, ensuring rapid threat identification, containment, and mitigation to safeguard the client’s infrastructure and data."
+    },
+    "media": {
+      "heroArt": "/src/assets/services/cyber-hero.png",
+      "vaptArt": "/src/assets/services/cyber-vapt.jpg",
+      "firewallArt": "/src/assets/services/cyber-firewall.jpg",
+      "patchArt": "/src/assets/services/cyber-patch.jpg",
+      "reportingArt": "/src/assets/services/cyber-reporting.jpg",
+      "consultationArt": "/src/assets/services/cyber-consultation.jpg"
+    },
+    "sections": [
+      {
+        "id": "soc",
+        "label": "Threat Detection and Monitoring: 24/7 Security Operations Center (SOC) Services.",
+        "headings": [
+          "Threat Detection and Monitoring: 24/7 Security Operations Center (SOC) Services."
+        ],
+        "paragraphs": [
+          "Security Operations Center",
+          "Constant monitoring of network traffic, system logs, and security events to identify and respond to potential security threats or breaches. This is accomplished by the SOC office by offering around-the-clock monitoring and response capabilities."
+        ],
+        "lists": [
+          {
+            "key": "cycle",
+            "items": [
+              {
+                "name": "Monitoring"
+              },
+              {
+                "name": "Detection"
+              },
+              {
+                "name": "Analysis"
+              },
+              {
+                "name": "Response"
+              }
+            ]
+          }
+        ],
+        "images": []
+      },
+      {
+        "id": "services",
+        "label": "Safeguarding your",
+        "headings": ["Safeguarding your", "Need around-the-clock protection?"],
+        "paragraphs": ["Managed security services"],
+        "lists": [
+          {
+            "key": "services",
+            "items": [
+              {
+                "title": "Vulnerability Management (VAPTs)",
+                "image": "/src/assets/services/cyber-vapt.jpg",
+                "text": "Regular scanning and assessment of systems and applications for vulnerabilities, followed by appropriate mitigation strategies."
+              },
+              {
+                "title": "Firewall and Network Security Management (Network Architecture Review)",
+                "image": "/src/assets/services/cyber-firewall.jpg",
+                "text": "Management and configuration of firewall rules, network segmentation, and traffic filtering."
+              },
+              {
+                "title": "Security Patch Management",
+                "image": "/src/assets/services/cyber-patch.jpg",
+                "text": "Ensuring that systems and applications are up-to-date with the latest security patches and updates."
+              },
+              {
+                "title": "Security Reporting and Analytics",
+                "image": "/src/assets/services/cyber-reporting.jpg",
+                "text": "Regular reporting on security metrics, incidents, and vulnerabilities to provide insights into the organization’s security posture."
+              },
+              {
+                "title": "Security Consultation",
+                "image": "/src/assets/services/cyber-consultation.jpg",
+                "text": "Providing expertise and guidance on security best practices, compliance requirements, and risk management strategies."
+              }
+            ]
+          }
+        ],
+        "images": []
+      },
+      {
+        "id": "assessment",
+        "label": "How do we comprehensively do",
+        "headings": ["How do we comprehensively do"],
+        "paragraphs": [
+          "Comprehensive vulnerability assessment",
+          "Comprehensive Vulnerability Assessment"
+        ],
+        "lists": [
+          {
+            "key": "assessments",
+            "items": [
+              {
+                "name": "External Assessment",
+                "finds": "Identify vulnerabilities from the outside"
+              },
+              {
+                "name": "Internal Assessment",
+                "finds": "Identifies vulnerabilities on the inside of the network"
+              },
+              {
+                "name": "Social Engineering",
+                "finds": "Identifies vulnerabilities within human resources & training gaps"
+              },
+              {
+                "name": "Wireless Assessment",
+                "finds": "Identifies vulnerabilities within a wireless network"
+              },
+              {
+                "name": "Physical Security Assessment",
+                "finds": "Identifies vulnerabilities related to people & facilities"
+              },
+              {
+                "name": "Application & Database",
+                "finds": "Identifies Software Vulnerabilities"
+              }
+            ]
+          }
+        ],
+        "images": []
+      },
+      {
+        "id": "compare",
+        "label": "What is the difference between",
+        "headings": ["What is the difference between"],
+        "paragraphs": [
+          "Know the difference",
+          "Request a call back from our experts today to provide you with guidance on monitoring, detection, analysis, and response to security incidents, to ensure rapid threat identification, containment, and mitigation to safeguard the client’s infrastructure and data."
+        ],
+        "lists": [
+          {
+            "key": "comparison",
+            "items": [
+              {
+                "aspect": "Result",
+                "assessment": "Lists out all the existing vulnerabilities",
+                "testing": "Simulates real-life attacks leading to exploitation of vulnerabilities."
+              },
+              {
+                "aspect": "Focus",
+                "assessment": "Focuses on individual vulnerabilities.",
+                "testing": "Focuses on the quantification of damages."
+              },
+              {
+                "aspect": "Business Value",
+                "assessment": "Finds the instances when business equipment can be compromised",
+                "testing": "Exploits the weaknesses & suggests measures for mitigation."
+              }
+            ]
+          }
+        ],
+        "images": []
+      }
+    ],
+    "constants": {
+      "cycle": [
+        {
+          "name": "Monitoring"
+        },
+        {
+          "name": "Detection"
+        },
+        {
+          "name": "Analysis"
+        },
+        {
+          "name": "Response"
+        }
+      ],
+      "services": [
+        {
+          "title": "Vulnerability Management (VAPTs)",
+          "image": "/src/assets/services/cyber-vapt.jpg",
+          "text": "Regular scanning and assessment of systems and applications for vulnerabilities, followed by appropriate mitigation strategies."
+        },
+        {
+          "title": "Firewall and Network Security Management (Network Architecture Review)",
+          "image": "/src/assets/services/cyber-firewall.jpg",
+          "text": "Management and configuration of firewall rules, network segmentation, and traffic filtering."
+        },
+        {
+          "title": "Security Patch Management",
+          "image": "/src/assets/services/cyber-patch.jpg",
+          "text": "Ensuring that systems and applications are up-to-date with the latest security patches and updates."
+        },
+        {
+          "title": "Security Reporting and Analytics",
+          "image": "/src/assets/services/cyber-reporting.jpg",
+          "text": "Regular reporting on security metrics, incidents, and vulnerabilities to provide insights into the organization’s security posture."
+        },
+        {
+          "title": "Security Consultation",
+          "image": "/src/assets/services/cyber-consultation.jpg",
+          "text": "Providing expertise and guidance on security best practices, compliance requirements, and risk management strategies."
+        }
+      ],
+      "assessments": [
+        {
+          "name": "External Assessment",
+          "finds": "Identify vulnerabilities from the outside"
+        },
+        {
+          "name": "Internal Assessment",
+          "finds": "Identifies vulnerabilities on the inside of the network"
+        },
+        {
+          "name": "Social Engineering",
+          "finds": "Identifies vulnerabilities within human resources & training gaps"
+        },
+        {
+          "name": "Wireless Assessment",
+          "finds": "Identifies vulnerabilities within a wireless network"
+        },
+        {
+          "name": "Physical Security Assessment",
+          "finds": "Identifies vulnerabilities related to people & facilities"
+        },
+        {
+          "name": "Application & Database",
+          "finds": "Identifies Software Vulnerabilities"
+        }
+      ],
+      "comparison": [
+        {
+          "aspect": "Result",
+          "assessment": "Lists out all the existing vulnerabilities",
+          "testing": "Simulates real-life attacks leading to exploitation of vulnerabilities."
+        },
+        {
+          "aspect": "Focus",
+          "assessment": "Focuses on individual vulnerabilities.",
+          "testing": "Focuses on the quantification of damages."
+        },
+        {
+          "aspect": "Business Value",
+          "assessment": "Finds the instances when business equipment can be compromised",
+          "testing": "Exploits the weaknesses & suggests measures for mitigation."
+        }
+      ]
+    }
+  },
+  "automation-tools": {
+    "hero": {
+      "trail": ["Our Services"],
+      "eyebrow": "Powered by Rodela Techhouse",
+      "title": "Automation Tools",
+      "lead": "Three compliance platforms from our technology partner, Rodela Techhouse, take you from your first ISO 27001 gap assessment to a connected governance, risk and compliance programme."
+    },
+    "media": {
+      "gapAssessShot": "/src/assets/services/gapassess-platform.webp",
+      "ismsShot": "/src/assets/services/sentinel-isms-platform.webp",
+      "strataOneShot": "/src/assets/services/strataone-platform.webp",
+      "rodelaLogo": "/src/assets/logos/rodela-logo.png"
+    },
+    "sections": [
+      {
+        "id": "tools",
+        "label": "From first assessment",
+        "headings": ["From first assessment"],
+        "paragraphs": ["How the tools fit together"],
+        "lists": [
+          {
+            "key": "tools",
+            "items": [
+              {
+                "id": "gapassess",
+                "name": "GapAssess",
+                "step": "Assess",
+                "category": "ISO 27001 gap assessment",
+                "tagline": "Know exactly where you stand.",
+                "text": "Evaluate your information security posture against ISO/IEC 27001:2022. GapAssess identifies the gaps, scores your maturity and generates reports, giving you a clear path to certification readiness.",
+                "features": [
+                  "Assessment against ISO/IEC 27001:2022",
+                  "Gap identification and maturity scoring",
+                  "Reports for management and auditors",
+                  "Secured with multi-factor authentication"
+                ],
+                "url": "https://gap-assessment.rodelatech.com/login",
+                "visit": "Open GapAssess",
+                "shot": "/src/assets/services/gapassess-platform.webp"
+              },
+              {
+                "id": "isms-platform",
+                "name": "Sentinel Africa ISMS Platform",
+                "step": "Implement",
+                "category": "ISO 27001 compliance automation",
+                "tagline": "Run your ISMS with precision and confidence.",
+                "text": "An enterprise ISMS automation platform for managing ISO 27001:2022 implementations, risk assessments, internal audits and Annex A controls across multiple organisations. Built for government ministries, departments and agencies, and organisations across East Africa.",
+                "features": [
+                  "All 10 clauses of ISO 27001:2022 and the 93 Annex A controls",
+                  "Multi-organisation management for ministries, departments and agencies",
+                  "Role-based access for platform, organisation and department users",
+                  "Central documents, audit trails and compliance reports on demand"
+                ],
+                "url": "https://isms.rodelatech.com/",
+                "visit": "Visit the ISMS Platform",
+                "shot": "/src/assets/services/sentinel-isms-platform.webp"
+              },
+              {
+                "id": "strataone",
+                "name": "StrataOne",
+                "step": "Connect and grow",
+                "category": "Connected GRC solutions",
+                "tagline": "Bring governance, risk and compliance into alignment.",
+                "text": "StrataOne brings your management systems into one workspace. Define your organisation’s context, people and documents once and build on them across every standard, with a dedicated internal audit workspace for audit firms.",
+                "features": [
+                  "ISO/IEC 27001 information security management system",
+                  "ISO/IEC 42001:2023 artificial intelligence management system",
+                  "Risk assessment and treatment with clear ownership",
+                  "Versioned documents, formal approvals and a full audit trail",
+                  "Internal Audit workspace, with a 30-day free trial"
+                ],
+                "url": "https://strataone.tech/",
+                "visit": "Visit StrataOne",
+                "shot": "/src/assets/services/strataone-platform.webp"
+              }
+            ]
+          }
+        ],
+        "images": []
+      },
+      {
+        "id": "section-2",
+        "label": "Page section",
+        "headings": [],
+        "paragraphs": ["0 ·"],
+        "lists": [],
+        "images": []
+      }
+    ],
+    "constants": {
+      "tools": [
+        {
+          "id": "gapassess",
+          "name": "GapAssess",
+          "step": "Assess",
+          "category": "ISO 27001 gap assessment",
+          "tagline": "Know exactly where you stand.",
+          "text": "Evaluate your information security posture against ISO/IEC 27001:2022. GapAssess identifies the gaps, scores your maturity and generates reports, giving you a clear path to certification readiness.",
+          "features": [
+            "Assessment against ISO/IEC 27001:2022",
+            "Gap identification and maturity scoring",
+            "Reports for management and auditors",
+            "Secured with multi-factor authentication"
+          ],
+          "url": "https://gap-assessment.rodelatech.com/login",
+          "visit": "Open GapAssess",
+          "shot": "/src/assets/services/gapassess-platform.webp"
+        },
+        {
+          "id": "isms-platform",
+          "name": "Sentinel Africa ISMS Platform",
+          "step": "Implement",
+          "category": "ISO 27001 compliance automation",
+          "tagline": "Run your ISMS with precision and confidence.",
+          "text": "An enterprise ISMS automation platform for managing ISO 27001:2022 implementations, risk assessments, internal audits and Annex A controls across multiple organisations. Built for government ministries, departments and agencies, and organisations across East Africa.",
+          "features": [
+            "All 10 clauses of ISO 27001:2022 and the 93 Annex A controls",
+            "Multi-organisation management for ministries, departments and agencies",
+            "Role-based access for platform, organisation and department users",
+            "Central documents, audit trails and compliance reports on demand"
+          ],
+          "url": "https://isms.rodelatech.com/",
+          "visit": "Visit the ISMS Platform",
+          "shot": "/src/assets/services/sentinel-isms-platform.webp"
+        },
+        {
+          "id": "strataone",
+          "name": "StrataOne",
+          "step": "Connect and grow",
+          "category": "Connected GRC solutions",
+          "tagline": "Bring governance, risk and compliance into alignment.",
+          "text": "StrataOne brings your management systems into one workspace. Define your organisation’s context, people and documents once and build on them across every standard, with a dedicated internal audit workspace for audit firms.",
+          "features": [
+            "ISO/IEC 27001 information security management system",
+            "ISO/IEC 42001:2023 artificial intelligence management system",
+            "Risk assessment and treatment with clear ownership",
+            "Versioned documents, formal approvals and a full audit trail",
+            "Internal Audit workspace, with a 30-day free trial"
+          ],
+          "url": "https://strataone.tech/",
+          "visit": "Visit StrataOne",
+          "shot": "/src/assets/services/strataone-platform.webp"
+        }
+      ]
+    }
+  },
+  "rwanda-dpp-registration": {
+    "hero": {
+      "trail": ["Our Services"],
+      "eyebrow": "Your Fast-Track to Compliance!",
+      "title": "Rwanda DPP Registration",
+      "lead": "Introducing Sentinel Africa’s Rwanda DPP Registration Accelerator – Your Fast-Track to Compliance! Welcome to the Rwanda DPP Registration Accelerator, a cutting-edge solution designed to streamline and expedite registration so as to comply with the DPP law in Rwanda."
+    },
+    "media": {
+      "banner": "/src/assets/services/dpp-banner.jpg",
+      "bannerVideo": "/src/assets/services/dpp-banner-video.mp4",
+      "bannerVideoPoster": "/src/assets/services/dpp-banner-video-poster.jpg"
+    },
+    "sections": [
+      {
+        "id": "section-1",
+        "label": "About the accelerator",
+        "headings": [],
+        "paragraphs": [
+          "We understand that navigating the intricacies of registration can be daunting and time-consuming for organizations, especially those lacking the expertise and resources.",
+          "With our expertise and in-depth knowledge of the registration requirements, we offer a seamless journey to obtain your certificate of registration as a data controller or processor in Rwanda."
+        ],
+        "lists": [],
+        "images": []
+      },
+      {
+        "id": "why",
+        "label": "Why do you need to register?",
+        "headings": ["Why do you need to register?"],
+        "paragraphs": [
+          "The law",
+          "Therefore, it is mandatory for any natural person, public or private corporate body intending to be a Data Controller or a Data Processor to register with the Data Protection and Privacy Office under National Cyber Security Authority (NCSA) and receive a registration certificate.",
+          "By registering and providing information about your data processing operations to the supervisory authority, you are making the first step towards compliance and contributing to a responsible, transparent, and accountable data ecosystem in Rwanda.",
+          "Article 29",
+          "Operating without a registration certificate is an administrative misconduct."
+        ],
+        "lists": [],
+        "images": []
+      },
+      {
+        "id": "who",
+        "label": "Any Data Controller",
+        "headings": ["Any Data Controller", "In Rwanda", "Outside Rwanda"],
+        "paragraphs": [
+          "Who is required to register?",
+          "is established or resides in Rwanda and processes personal data while in Rwanda;",
+          "is neither established nor resides in Rwanda, but processes the personal data of Data Subjects located in Rwanda."
+        ],
+        "lists": [],
+        "images": []
+      },
+      {
+        "id": "ascertain",
+        "label": "Ascertain If you are a Data Controller or Processor!",
+        "headings": ["Ascertain If you are a Data Controller or Processor!"],
+        "paragraphs": [
+          "Step one",
+          "You are required to register as a data processor or controller, you therefore need to ascertain if you are a controller or processor or both. We will help you ascertain that by simply answering a few questions. Click the link below and get to know in a few minutes."
+        ],
+        "lists": [],
+        "images": []
+      },
+      {
+        "id": "how",
+        "label": "Get it right",
+        "headings": ["Get it right"],
+        "paragraphs": [
+          "How will we help?",
+          "In just five days, we’ll handle the entire process, from document preparation to application submission, allowing you to focus on your core business activities without disruptions. Rest assured, we’ll navigate every step with precision and care, ensuring your registration journey is smooth and successful."
+        ],
+        "lists": [
+          {
+            "key": "steps",
+            "items": [
+              {
+                "text": "You’ll provide us with your details and upload the necessary documents."
+              },
+              {
+                "text": "Our team of experts will meticulously review and correct any discrepancies."
+              },
+              {
+                "text": "We will then have you sign the required documents, then compile the documents into a comprehensive package for submission to the supervisory authority."
+              },
+              {
+                "text": "You will need to create an email and share the credentials, we will then share the documents for you via that email and inform you when your certificate is ready in a week."
+              }
+            ]
+          }
+        ],
+        "images": []
+      },
+      {
+        "id": "documents",
+        "label": "Here is a List of the Documents you will need to upload!",
+        "headings": ["Here is a List of the Documents you will need to upload!"],
+        "paragraphs": [
+          "Be prepared",
+          "Join numerous organizations in Rwanda that have already experienced the efficiency and convenience of the Rwanda DPP Registration Accelerator. Let us empower your compliance journey, so you can confidently operate within the regulatory framework and elevate your organization to new heights of data protection and privacy.",
+          "Partner with Sentinel Africa today, and embark on a fast track to DPP registration – unlocking compliance with ease and precision. Trust in our expertise, and together, we’ll achieve your compliance goals in record time.",
+          "Documents checklist"
+        ],
+        "lists": [
+          {
+            "key": "documents",
+            "items": [
+              {
+                "text": "Letter of application addressed to the Chief Executive Officer of NCSA",
+                "template": true
+              },
+              {
+                "text": "Certificate of incorporation"
+              },
+              {
+                "text": "License from Regulator (if applicable) e.g. license issued by RURA, MINICOM"
+              },
+              {
+                "text": "Legal instrument establishing the entity (in the case of a public entity)"
+              },
+              {
+                "text": "Contract with the representative (only for those Data Controllers/ Data Processors that are neither established nor reside in Rwanda but process personal data of Data Subjects located in Rwanda)"
+              },
+              {
+                "text": "Any other supporting document (e.g. a contract between Data Controller and Data Processor, privacy notice)"
+              },
+              {
+                "text": "DPO’s Letter of Appointment",
+                "template": true
+              }
+            ]
+          }
+        ],
+        "images": []
+      }
+    ],
+    "constants": {
+      "ascertainForm": "https://forms.zohopublic.com/SentinelAfrica/form/F1AscertainifaDataProcessororController/formperma/pMN-dhi6olYJWvbOey9qlt0vRY475f8OIN2J2NuuzdY",
+      "steps": [
+        {
+          "text": "You’ll provide us with your details and upload the necessary documents."
+        },
+        {
+          "text": "Our team of experts will meticulously review and correct any discrepancies."
+        },
+        {
+          "text": "We will then have you sign the required documents, then compile the documents into a comprehensive package for submission to the supervisory authority."
+        },
+        {
+          "text": "You will need to create an email and share the credentials, we will then share the documents for you via that email and inform you when your certificate is ready in a week."
+        }
+      ],
+      "documents": [
+        {
+          "text": "Letter of application addressed to the Chief Executive Officer of NCSA",
+          "template": true
+        },
+        {
+          "text": "Certificate of incorporation"
+        },
+        {
+          "text": "License from Regulator (if applicable) e.g. license issued by RURA, MINICOM"
+        },
+        {
+          "text": "Legal instrument establishing the entity (in the case of a public entity)"
+        },
+        {
+          "text": "Contract with the representative (only for those Data Controllers/ Data Processors that are neither established nor reside in Rwanda but process personal data of Data Subjects located in Rwanda)"
+        },
+        {
+          "text": "Any other supporting document (e.g. a contract between Data Controller and Data Processor, privacy notice)"
+        },
+        {
+          "text": "DPO’s Letter of Appointment",
+          "template": true
+        }
+      ]
+    }
+  },
+  "shop": {
+    "hero": {
+      "trail": ["Resources"],
+      "eyebrow": "Certified self-study trainings",
+      "title": "Shop",
+      "lead": "Explore Knowledge in the Digital Era: Your Gateway to Seamless Learning and Discovery!"
+    },
+    "media": {
+      "shopBanner": "/src/assets/services/shop-banner.jpg"
+    },
+    "sections": [
+      {
+        "id": "section-1",
+        "label": "Why self-study",
+        "headings": [],
+        "paragraphs": [],
+        "lists": [
+          {
+            "key": "perks",
+            "items": [
+              {
+                "title": "Learn at your pace",
+                "text": "Study when and where it suits you."
+              },
+              {
+                "title": "Fully online",
+                "text": "Course material available wherever you are."
+              },
+              {
+                "title": "Certification ready",
+                "text": "Prepare for internationally recognized certifications."
+              }
+            ]
+          }
+        ],
+        "images": []
+      },
+      {
+        "id": "catalogue",
+        "label": "Certified self-study",
+        "headings": ["Certified self-study"],
+        "paragraphs": [
+          "Self-study catalogue",
+          "Prefer a classroom? We also run physical and virtual instructor-led classes, public and in-house."
+        ],
+        "lists": [],
+        "images": []
+      }
+    ],
+    "constants": {
+      "perks": [
+        {
+          "title": "Learn at your pace",
+          "text": "Study when and where it suits you."
+        },
+        {
+          "title": "Fully online",
+          "text": "Course material available wherever you are."
+        },
+        {
+          "title": "Certification ready",
+          "text": "Prepare for internationally recognized certifications."
+        }
+      ]
+    }
+  },
+  "blog": {
+    "hero": {
+      "trail": ["Resources"],
+      "eyebrow": "Insights",
+      "title": "Blog",
+      "lead": "Perspectives from our consultants on information security, data protection, business continuity and risk management across Africa."
+    },
+    "media": {},
+    "sections": [
+      {
+        "id": "articles",
+        "label": "Expertise, shared.",
+        "headings": ["Expertise, shared."],
+        "paragraphs": [
+          "All articles",
+          "No articles match your search. Try another word, or show all articles ."
+        ],
+        "lists": [],
+        "images": []
+      }
+    ],
+    "constants": {}
+  },
+  "sdg": {
+    "hero": {
+      "trail": ["Resources"],
+      "eyebrow": "Our commitment to sustainability",
+      "title": "Our SDG’s Commitment",
+      "lead": "Our commitment to sustainability knows no bounds. We believe and acknowledge that we are a socially responsible organization committed to making a positive impact on the world."
+    },
+    "media": {
+      "educationPhoto": "/src/assets/sdg/quality-education.jpg",
+      "genderPhoto": "/src/assets/sdg/gender-equality.jpg",
+      "inequalityPhoto": "/src/assets/sdg/reduced-inequalities.jpg"
+    },
+    "sections": [
+      {
+        "id": "goals",
+        "label": "Our commitment",
+        "headings": [],
+        "paragraphs": [
+          "We recognize the significance of the United Nations’ Sustainable Development Goals (SDGs) and their role in addressing global challenges.",
+          "In particular, we are deeply committed to contributing to SDG Goal 4: Quality Education, SDG Goal 5: Gender Equality, and SDG Goal 10: Reduced Inequality. Our commitment extends beyond business success; we strive to foster sustainable development in the communities we serve and are part of."
+        ],
+        "lists": [],
+        "images": []
+      }
+    ],
+    "constants": {
+      "goals": [
+        {
+          "number": "4",
+          "name": "Quality Education",
+          "colour": "#c5192d",
+          "id": "quality-education"
+        },
+        {
+          "number": "5",
+          "name": "Gender Equality",
+          "colour": "#ff3a21",
+          "id": "gender-equality"
+        },
+        {
+          "number": "10",
+          "name": "Reduced Inequality",
+          "colour": "#dd1367",
+          "id": "reduced-inequality"
+        }
+      ],
+      "genderSplit": [
+        {
+          "team": "Sentinel’s Staff Team",
+          "men": "48",
+          "women": "52"
+        },
+        {
+          "team": "Sentinel’s Board Members",
+          "men": "43",
+          "women": "57"
+        },
+        {
+          "team": "Sentinel’s Senior Management Team",
+          "men": "33",
+          "women": "67"
+        },
+        {
+          "team": "Sentinel’s Middle Management Team",
+          "men": "42",
+          "women": "58"
+        }
+      ],
+      "inequalityCommitments": [
+        {
+          "text": "Sentinel Africa has equal pay for equal work"
+        },
+        {
+          "text": "Sentinel Africa office Rainbow Tower has disability access"
+        },
+        {
+          "text": "Maternity Leave Days – 90 days + 3 months remote working. Full pay"
+        },
+        {
+          "text": "Sentinel Africa does not discriminate on Country, Age, Race, Religion, or Disability."
+        }
+      ]
+    }
+  },
+  "join-our-team": {
+    "hero": {
+      "trail": ["Careers"],
+      "eyebrow": "Become a Sentinel",
+      "title": "Join our Team",
+      "lead": "A Sentinel is a guard during peace and a soldier during war. Our team of sentinels are obsessed with guarding our clients against risk as well as shielding them as they pursue opportunities – making them win! Join the team and grow to become a great Sentinel – strong in the service of our clients and communities, diligent, and effortlessly competent."
+    },
+    "media": {},
+    "sections": [
+      {
+        "id": "section-1",
+        "label": "Role details",
+        "headings": [],
+        "paragraphs": [
+          "Applications close on and go to .",
+          "Include in your application",
+          "This opportunity closed on . It is kept here for reference."
+        ],
+        "lists": [],
+        "images": []
+      },
+      {
+        "id": "opportunities",
+        "label": "Open roles at Sentinel Africa.",
+        "headings": [
+          "Open roles at Sentinel Africa.",
+          "There are no open roles right now",
+          "Recently closed"
+        ],
+        "paragraphs": [
+          "Career opportunities",
+          "New opportunities are published here. Register your interest and we’ll keep your details for future roles that match your experience."
+        ],
+        "lists": [],
+        "images": []
+      },
+      {
+        "id": "register-interest",
+        "label": "Don’t see your role? Register your interest.",
+        "headings": ["Don’t see your role? Register your interest."],
+        "paragraphs": [
+          "General applications",
+          "Send us your details and CV. We maintain a pool of talent and will contact you when a suitable opportunity opens.",
+          "Applications go to"
+        ],
+        "lists": [],
+        "images": []
+      }
+    ],
+    "constants": {
+      "blank": {
+        "name": "",
+        "email": "",
+        "phone": "",
+        "area": "",
+        "link": "",
+        "message": ""
+      },
+      "shieldPoints": [
+        {
+          "text": "Constantly trained"
+        },
+        {
+          "text": "Recognised and rewarded"
+        },
+        {
+          "text": "Challenged with meaningful assignments"
+        }
+      ]
+    }
+  },
+  "talent-shield": {
+    "hero": {
+      "trail": ["Careers"],
+      "eyebrow": "Sentinel Talent Shield Program",
+      "title": "SAC Talent Shield",
+      "lead": "Empowering Dreams & Shaping Futures. Tuition scholarships, mentorship and internships for gifted but underprivileged students joining Kenyan universities."
+    },
+    "media": {
+      "scholarPhoto": "/src/assets/sdg/quality-education.jpg",
+      "videoPoster": "/src/assets/careers/talent-shield-video.jpg"
+    },
+    "sections": [
+      {
+        "id": "section-1",
+        "label": "From a Talent Shield scholar",
+        "headings": [],
+        "paragraphs": [
+          "As a proud alumni of the Talent Shield program, I can confidently say that it has exceeded my expectations in every way. It has been a beacon of hope, a catalyst for growth, and a promise of a brighter future. Sentinel Africa has truly redefined sponsorship with Talent Shield, and I am excited to witness the positive impact it will continue to have on the lives of countless young individuals like me."
+        ],
+        "lists": [],
+        "images": []
+      },
+      {
+        "id": "about",
+        "label": "Untapped potential exists in every corner.",
+        "headings": ["Untapped potential exists in every corner."],
+        "paragraphs": [
+          "About Talent Shield",
+          "At Sentinel Africa Consulting, we are driven by a profound belief in the power of talent and the transformational impact of education. We understand that untapped potential exists in every corner of our society, and we are committed to nurturing it.",
+          "The Sentinel Talent Shield Program extends a helping hand to gifted but underprivileged individuals who are either joining the university or in their first year at the university. Our mission is clear: to provide holistic support that not only covers tuition scholarships but also includes essential career guidance and development.",
+          "We are dedicated to creating a nurturing environment of empowerment through access to education and mentorship opportunities. If you are a talented, motivated individual who dreams of achieving greatness, we invite you to be a part of the Sentinel Talent Shield program."
+        ],
+        "lists": [
+          {
+            "key": "benefits",
+            "items": [
+              {
+                "title": "Tuition fees sponsorship",
+                "text": "Scholarships that cover tuition fees for university education."
+              },
+              {
+                "title": "Career advice and mentorship",
+                "text": "Guidance and mentorship that build a successful professional journey."
+              },
+              {
+                "title": "Internship opportunities",
+                "text": "Invaluable internships that lay the foundation for a fulfilling career."
+              }
+            ]
+          }
+        ],
+        "images": []
+      },
+      {
+        "id": "eligibility",
+        "label": "Who can apply",
+        "headings": ["Who can apply", "From application to award"],
+        "paragraphs": ["Eligibility criteria", "Application stages", "Stage ."],
+        "lists": [
+          {
+            "key": "eligibility",
+            "items": [
+              "You must have been admitted to a Kenyan University through KUCCPS.",
+              "You should either be joining your first year at the university or currently in your first year of study.",
+              "Ability to provide consent to share your information. For those under the age of 18 years, a guardian will have to assist in filling in the application form.",
+              "Be available for contact and provide references available for contact."
+            ]
+          },
+          {
+            "key": "stages",
+            "items": [
+              "This will involve filling in the assessment on the basic criteria for shortlisting. The shortlisted applicant will proceed to Stage Two.",
+              "You shall be contacted through the contact details provided in Stage One to request supporting documents for review. The successful applicants shall proceed to Stage Three.",
+              "Applicants will be invited to an interview session. Interviews shall be conducted through videoconferencing.",
+              "A final round of checks will be conducted, and the award decision made. The successful applicant will be notified of the award."
+            ]
+          }
+        ],
+        "images": []
+      },
+      {
+        "id": "enquiries",
+        "label": "All enquiries are welcome",
+        "headings": ["All enquiries are welcome"],
+        "paragraphs": [
+          "Celebrating the programme’s first graduate from the University of Nairobi."
+        ],
+        "lists": [],
+        "images": []
+      },
+      {
+        "id": "privacy",
+        "label": "Privacy statement",
+        "headings": ["Privacy statement"],
+        "paragraphs": [
+          "The Sentinel Talent Shield Program is meant to grow and nurture special talent within Kenya. The application process will require that you share your personal data with us. We only collect information that we deem necessary in order to make the selection process possible and we will store and dispose of it securely at the end of the process."
+        ],
+        "lists": [],
+        "images": []
+      }
+    ],
+    "constants": {
+      "enquiries": {
+        "whatsapp": "+254715484888",
+        "email": "talentshield@sentinelafrica.co.ke"
+      },
+      "applicationsOpen": false,
+      "benefits": [
+        {
+          "title": "Tuition fees sponsorship",
+          "text": "Scholarships that cover tuition fees for university education."
+        },
+        {
+          "title": "Career advice and mentorship",
+          "text": "Guidance and mentorship that build a successful professional journey."
+        },
+        {
+          "title": "Internship opportunities",
+          "text": "Invaluable internships that lay the foundation for a fulfilling career."
+        }
+      ],
+      "eligibility": [
+        "You must have been admitted to a Kenyan University through KUCCPS.",
+        "You should either be joining your first year at the university or currently in your first year of study.",
+        "Ability to provide consent to share your information. For those under the age of 18 years, a guardian will have to assist in filling in the application form.",
+        "Be available for contact and provide references available for contact."
+      ],
+      "stages": [
+        "This will involve filling in the assessment on the basic criteria for shortlisting. The shortlisted applicant will proceed to Stage Two.",
+        "You shall be contacted through the contact details provided in Stage One to request supporting documents for review. The successful applicants shall proceed to Stage Three.",
+        "Applicants will be invited to an interview session. Interviews shall be conducted through videoconferencing.",
+        "A final round of checks will be conducted, and the award decision made. The successful applicant will be notified of the award."
+      ]
+    }
+  }
+}

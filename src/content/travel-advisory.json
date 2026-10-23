@@ -1,0 +1,71 @@
+{
+  "lastReviewed": null,
+  "countries": [
+    "Democratic Republic of the Congo",
+    "Kenya",
+    "Rwanda",
+    "Uganda",
+    "Tanzania",
+    "South Sudan",
+    "Burundi",
+    "Central African Republic",
+    "Ethiopia",
+    "Somalia",
+    "United States",
+    "United Kingdom",
+    "Other country"
+  ],
+  "airlines": [
+    { "name": "RwandAir", "url": "https://www.rwandair.com/travel-requirements-page/" },
+    { "name": "Kenya Airways", "url": "https://www.kenya-airways.com/" },
+    { "name": "Uganda Airlines", "url": "https://ugandairlines.com/" },
+    { "name": "Ethiopian Airlines", "url": "https://www.ethiopianairlines.com/" },
+    { "name": "Air Tanzania", "url": "https://www.airtanzania.co.tz/" },
+    { "name": "Turkish Airlines", "url": "https://www.turkishairlines.com/" },
+    { "name": "Qatar Airways", "url": "https://www.qatarairways.com/" },
+    { "name": "Emirates", "url": "https://www.emirates.com/" },
+    { "name": "Brussels Airlines", "url": "https://www.brusselsairlines.com/" },
+    { "name": "Air France", "url": "https://www.airfrance.com/" },
+    { "name": "KLM", "url": "https://www.klm.com/" },
+    { "name": "Other airline", "url": "" }
+  ],
+  "sources": [
+    {
+      "name": "DRC outbreak situation",
+      "publisher": "World Health Organization",
+      "url": "https://www.who.int/emergencies/situations/ebola-outbreak---drc-2026"
+    },
+    {
+      "name": "Travel Health Notices",
+      "publisher": "US Centers for Disease Control and Prevention",
+      "url": "https://wwwnc.cdc.gov/travel/notices"
+    },
+    {
+      "name": "Travel Notice RSS feed",
+      "publisher": "US Centers for Disease Control and Prevention",
+      "url": "https://wwwnc.cdc.gov/travel/rss/notices.xml"
+    },
+    {
+      "name": "Ebola entry notice for travellers",
+      "publisher": "Rwanda Biomedical Centre",
+      "url": "https://rbc.gov.rw/info-note-for-travelers"
+    },
+    {
+      "name": "Passenger documentation",
+      "publisher": "IATA Travel Centre",
+      "url": "https://www.iata.org/en/services/compliance/timatic/travel-documentation"
+    },
+    {
+      "name": "Timatic solutions",
+      "publisher": "IATA",
+      "url": "https://www.iata.org/timatic"
+    },
+    {
+      "name": "Travel requirements",
+      "publisher": "RwandAir",
+      "url": "https://www.rwandair.com/travel-requirements-page/"
+    }
+  ],
+  "advisories": [],
+  "requirements": []
+}

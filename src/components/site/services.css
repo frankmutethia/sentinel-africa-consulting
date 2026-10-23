@@ -1,0 +1,415 @@
+/* Building blocks shared by the service pages (Consultancy, Training, Cybershield and so on). */
+
+.svc-section {
+  padding-block: 112px;
+}
+.svc-section.is-pale {
+  background: var(--pale);
+}
+.svc-body {
+  max-width: 68ch;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #3f525c;
+}
+.svc-body + .svc-body {
+  margin-top: 20px;
+}
+.svc-lead-title {
+  margin-bottom: 18px;
+  font-family: var(--font-display);
+  font-size: clamp(19px, 1.6vw, 23px);
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--navy);
+}
+.svc-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px 28px;
+  margin-top: 36px;
+}
+
+/* Hero illustration */
+.svc-hero-art {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 24px 60px #102d3e0f;
+}
+.svc-hero-art img {
+  display: block;
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+}
+
+/* Card grid */
+.svc-card-grid {
+  display: grid;
+  gap: 24px;
+}
+.svc-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.svc-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.svc-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.svc-cols-5 {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+.svc-card-grid > li,
+.svc-card-reveal {
+  display: flex;
+}
+/* The reveal wrapper must fill its grid cell, or the card shrinks to its content. */
+.svc-card-reveal {
+  flex: 1;
+}
+.svc-card {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fff;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+.svc-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 60px #102d3e14;
+}
+.svc-card-image {
+  display: flex;
+  height: 200px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-bottom: 1px solid var(--line);
+  background: #f7fbfc;
+}
+.svc-card-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.svc-card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 30px 30px 32px;
+}
+.svc-card-icon {
+  display: inline-flex;
+  width: 48px;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+  border-radius: 12px;
+  background: var(--navy);
+  color: #fff;
+}
+.svc-card h3 {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+}
+.svc-card-text {
+  margin-top: 12px;
+  font-size: 15px;
+  line-height: 1.75;
+  color: #3f525c;
+}
+.svc-card-text ul {
+  display: grid;
+  gap: 6px;
+  margin-top: 8px;
+}
+.svc-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--blue);
+}
+.svc-card-link:hover {
+  color: var(--navy);
+}
+
+/* Checklist */
+.svc-checklist {
+  display: grid;
+  gap: 14px;
+}
+.svc-checklist li {
+  display: flex;
+  gap: 14px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #3f525c;
+}
+.svc-checklist li > span {
+  display: inline-flex;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+  border-radius: 50%;
+  background: #e8f6ee;
+  color: var(--green);
+}
+.svc-checklist strong {
+  color: var(--navy);
+}
+
+/* Media split */
+.svc-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 72px;
+  align-items: center;
+}
+.svc-split.is-reversed .svc-split-media {
+  order: -1;
+}
+.svc-split-copy h2 {
+  margin-bottom: 28px;
+}
+.svc-photo {
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 30px 80px #102d3e24;
+}
+.svc-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1100px) {
+  .svc-cols-3,
+  .svc-cols-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .svc-cols-5 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .svc-split {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 48px;
+  }
+  .svc-split.is-reversed .svc-split-media {
+    order: 0;
+  }
+  .svc-hero-art {
+    max-width: 560px;
+  }
+}
+@media (max-width: 640px) {
+  .svc-section {
+    padding-block: 64px;
+  }
+  .svc-cols-2,
+  .svc-cols-3,
+  .svc-cols-4,
+  .svc-cols-5 {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .svc-card-body {
+    padding: 24px 22px 26px;
+  }
+  .svc-hero-art {
+    padding: 18px;
+  }
+  .svc-body {
+    font-size: 16px;
+  }
+}
+
+/* Hero visual: illustration on a soft brand backdrop with an optional figures strip. */
+.svc-hero-visual {
+  position: relative;
+  display: grid;
+  justify-items: center;
+}
+.svc-hero-glow {
+  position: absolute;
+  inset: 4% 8% 22%;
+  z-index: -1;
+  border-radius: 50%;
+  background: radial-gradient(circle at 40% 40%, #d9eef7 0%, #e5f4ec 45%, transparent 72%);
+}
+.svc-hero-visual img {
+  width: 100%;
+  max-width: 460px;
+  height: auto;
+}
+.svc-hero-facts {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 8px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 18px 50px #102d3e12;
+}
+.svc-hero-facts > div {
+  padding: 18px 20px;
+}
+.svc-hero-facts > div + div {
+  border-left: 1px solid var(--line);
+}
+.svc-hero-facts dt {
+  font-family: var(--font-display);
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: var(--blue);
+}
+.svc-hero-facts dd {
+  margin-top: 6px;
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--muted);
+}
+
+@media (max-width: 1100px) {
+  .svc-hero-visual {
+    max-width: 560px;
+  }
+}
+@media (max-width: 640px) {
+  .svc-hero-facts {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .svc-hero-facts > div + div {
+    border-top: 1px solid var(--line);
+    border-left: 0;
+  }
+  .svc-hero-facts > div {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .svc-hero-facts dd {
+    margin-top: 0;
+  }
+}
+
+/* Illustrations drawn on white blend into tinted backdrops instead of showing a white box. */
+.svc-hero-visual img,
+.cyber-service-image img,
+.training-format-image img,
+.shop-area-head img,
+.training-tabs img,
+.training-panel-head img {
+  mix-blend-mode: multiply;
+}
+
+/* "Explore our other services" strip at the end of each service page. */
+.svc-others {
+  padding-block: 72px;
+  border-top: 1px solid var(--line);
+}
+.svc-others-head {
+  margin-bottom: 28px;
+}
+.sentinel-site .svc-others h2 {
+  font-size: clamp(24px, 2.2vw, 32px);
+}
+.svc-others-list {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 16px;
+}
+.svc-others-list a {
+  position: relative;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  gap: 16px;
+  padding: 22px 22px 24px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fff;
+  transition:
+    transform 0.25s,
+    border-color 0.25s,
+    box-shadow 0.25s;
+}
+.svc-others-list a:hover,
+.svc-others-list a:focus-visible {
+  transform: translateY(-4px);
+  border-color: #18a94b80;
+  box-shadow: 0 18px 44px #102d3e14;
+}
+.svc-others-icon {
+  display: inline-flex;
+  width: 46px;
+  height: 46px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: #e8f6ee;
+  color: var(--green);
+}
+.svc-others-list strong {
+  padding-right: 24px;
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+.svc-others-arrow {
+  position: absolute;
+  top: 22px;
+  right: 20px;
+  color: var(--muted);
+  transition: color 0.25s;
+}
+.svc-others-list a:hover .svc-others-arrow {
+  color: var(--green);
+}
+@media (max-width: 1100px) {
+  .svc-others-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (max-width: 640px) {
+  .svc-others {
+    padding-block: 56px;
+  }
+  .svc-others-list {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .svc-others-list a {
+    flex-direction: row;
+    align-items: center;
+  }
+  .svc-others-arrow {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

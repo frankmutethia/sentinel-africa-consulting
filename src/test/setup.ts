@@ -18,3 +18,7 @@ Object.defineProperty(window, "matchMedia", {
     dispatchEvent: () => {},
   }),
 });
+
+// Tests never reach the network. Tests that need WHO's answers replace fetch themselves.
+globalThis.fetch = (() =>
+  Promise.reject(new Error("The network is not available in tests"))) as typeof fetch;

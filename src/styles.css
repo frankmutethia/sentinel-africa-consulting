@@ -1,6 +1,5 @@
 @import "tailwindcss" source(none);
 @source "../src";
-@import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -47,6 +46,7 @@
   --color-paper: var(--paper);
   --color-signal: var(--signal);
   --color-signal-soft: var(--signal-soft);
+  --color-brand-blue: #087baa;
 
   --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
   --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
@@ -120,6 +120,15 @@
     scroll-behavior: smooth;
   }
 
+  section[id] {
+    scroll-margin-top: 6rem;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brand-blue);
+    outline-offset: 5px;
+  }
+
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
@@ -128,7 +137,10 @@
     text-rendering: optimizeLegibility;
   }
 
-  h1, h2, h3, h4 {
+  h1,
+  h2,
+  h3,
+  h4 {
     font-family: var(--font-display);
     letter-spacing: -0.02em;
   }
@@ -137,6 +149,31 @@
     background: var(--color-signal);
     color: var(--color-primary);
   }
+}
+
+.client-section {
+  background: linear-gradient(155deg, var(--color-paper), #eef5f7 60%, #f0f7f2);
+}
+
+.client-logo-card {
+  transition:
+    border-color 250ms ease,
+    box-shadow 250ms ease,
+    transform 250ms ease;
+}
+
+.client-logo-card:hover {
+  border-color: var(--color-brand-blue);
+  box-shadow: 0 12px 32px -20px var(--color-brand-blue);
+  transform: translateY(-3px);
+}
+
+.engagement-card img {
+  transition: transform 600ms ease;
+}
+
+.engagement-card:hover img {
+  transform: scale(1.025);
 }
 
 /* ---------- Motion language ---------- */
@@ -244,7 +281,8 @@
 
 /* Subtle green glow dot for live/active markers */
 @keyframes pulse-dot {
-  0%, 100% {
+  0%,
+  100% {
     box-shadow: 0 0 0 0 oklch(0.72 0.17 152 / 0.5);
   }
   50% {
@@ -272,6 +310,11 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .client-logo-card,
+  .engagement-card img {
+    transition: none;
+    transform: none;
+  }
   .reveal,
   .rise-in {
     opacity: 1;

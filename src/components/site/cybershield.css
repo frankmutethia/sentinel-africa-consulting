@@ -1,0 +1,431 @@
+/* Cybershield page. Shared service blocks and the hero facts strip live in services.css. */
+
+.cyber-hero {
+  display: grid;
+  gap: 18px;
+}
+.cyber-hero > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  box-shadow: 0 24px 60px #102d3e26;
+}
+.cyber-hero .svc-hero-facts {
+  margin-top: 0;
+}
+
+/* SOC band with the monitoring cycle */
+.cyber-soc {
+  background: linear-gradient(120deg, #0d2634, #12405a);
+  color: #fff;
+}
+.cyber-soc-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 80px;
+  align-items: center;
+  padding-block: 104px;
+}
+.cyber-soc .eyebrow {
+  color: #8fd3a8;
+}
+.cyber-soc h2 span {
+  color: #7cc7ec;
+}
+.cyber-soc-text {
+  max-width: 60ch;
+  margin-top: 24px;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #d4e1e6;
+}
+.cyber-cycle {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+.cyber-cycle li {
+  position: relative;
+  display: grid;
+  gap: 14px;
+  padding: 26px 24px;
+  border: 1px solid #ffffff1f;
+  border-radius: 16px;
+  background: #ffffff0d;
+}
+.cyber-cycle-icon {
+  display: inline-flex;
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: #18a94b33;
+  color: #8fd3a8;
+}
+.cyber-cycle li:nth-child(even) .cyber-cycle-icon {
+  background: #087bb033;
+  color: #7cc7ec;
+}
+.cyber-cycle small {
+  position: absolute;
+  top: 26px;
+  right: 24px;
+  font-family: var(--font-display);
+  font-size: 14px;
+  color: #ffffff80;
+}
+.cyber-cycle strong {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 500;
+}
+
+/* Services */
+.cyber-services {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+.cyber-services > li {
+  display: flex;
+}
+.cyber-service {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #fff;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+.cyber-service:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 60px #102d3e14;
+}
+.cyber-service-image {
+  display: flex;
+  height: 190px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-bottom: 1px solid var(--line);
+  background: #f7fbfc;
+}
+.cyber-service-image img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 8px;
+  object-fit: contain;
+}
+.cyber-service-body {
+  padding: 26px 28px 30px;
+}
+.cyber-service h3 {
+  margin-bottom: 10px;
+  font-family: var(--font-display);
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+.cyber-service p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #3f525c;
+}
+.cyber-service-cta {
+  justify-content: center;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 36px 32px;
+  border: 0;
+  background: linear-gradient(160deg, #0f6a3a, #18a94b);
+  color: #fff;
+}
+.cyber-service-cta h3 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+.cyber-service-cta .button {
+  background: #fff;
+  color: var(--navy);
+}
+
+/* Vulnerability assessment diagram: a header bar with six hanging, staggered steps. */
+.cyber-assessment-bar {
+  position: relative;
+  z-index: 1;
+  padding: 18px 24px;
+  border-radius: 14px;
+  background: var(--navy);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+.cyber-assessment-steps {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 16px;
+}
+.cyber-assessment-steps > li {
+  --tone: #3fa9f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cyber-assessment-steps > li:nth-child(2) {
+  --tone: #2b8ce6;
+}
+.cyber-assessment-steps > li:nth-child(3) {
+  --tone: #1a73c4;
+}
+.cyber-assessment-steps > li:nth-child(4) {
+  --tone: #135d9e;
+}
+.cyber-assessment-steps > li:nth-child(5) {
+  --tone: #0e4677;
+}
+.cyber-assessment-steps > li:nth-child(6) {
+  --tone: #0b2f52;
+}
+.cyber-assessment-stem {
+  width: 2px;
+  height: 36px;
+  background: var(--tone);
+}
+/* Alternate steps hang lower, echoing the zigzag of the original diagram. */
+.cyber-assessment-steps > li:nth-child(even) .cyber-assessment-stem {
+  height: 96px;
+}
+.cyber-assessment-card {
+  position: relative;
+  display: grid;
+  width: 100%;
+  justify-items: center;
+  gap: 8px;
+  padding: 26px 16px 24px;
+  border-top: 4px solid var(--tone);
+  border-radius: 14px;
+  background: #fff;
+  text-align: center;
+  box-shadow: 0 16px 40px #102d3e0f;
+}
+.cyber-assessment-icon {
+  display: inline-flex;
+  width: 52px;
+  height: 52px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 6px;
+  border-radius: 14px;
+  background: var(--tone);
+  color: #fff;
+}
+.cyber-assessment-card small {
+  font-family: var(--font-display);
+  font-size: 13px;
+  color: var(--muted);
+}
+.cyber-assessment-card h3 {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+.cyber-assessment-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #3f525c;
+}
+
+/* VA vs PT: pill rows with the aspect in the middle, as in the original diagram. */
+.cyber-compare {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 14px;
+}
+.cyber-compare thead th {
+  padding: 0 28px 4px;
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--navy);
+}
+.cyber-compare thead th:first-child {
+  text-align: right;
+}
+.cyber-compare thead th:last-child {
+  text-align: left;
+}
+.cyber-compare tbody tr {
+  --tone: #3fa9f5;
+}
+.cyber-compare tbody tr:nth-child(2) {
+  --tone: #1f8ae0;
+}
+.cyber-compare tbody tr:nth-child(3) {
+  --tone: #0b6cbf;
+}
+.cyber-compare td,
+.cyber-compare tbody th {
+  padding: 24px 28px;
+  background: var(--tone);
+  font-size: 17px;
+  line-height: 1.5;
+  color: #fff;
+  vertical-align: middle;
+}
+.cyber-compare td:first-child {
+  width: 40%;
+  border-radius: 999px 0 0 999px;
+  text-align: right;
+}
+.cyber-compare td:last-child {
+  width: 40%;
+  border-radius: 0 999px 999px 0;
+  text-align: left;
+}
+.cyber-compare tbody th {
+  padding: 8px;
+}
+.cyber-compare-aspect {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 72px;
+  padding: 0 22px;
+  border: 2px solid #ffffff80;
+  border-radius: 999px;
+  background: var(--navy);
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.cyber-callback {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  margin-top: 40px;
+  padding: 36px 40px;
+  border-left: 4px solid var(--green);
+  border-radius: 0 16px 16px 0;
+  background: var(--pale);
+}
+.cyber-callback p {
+  max-width: 70ch;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #3f525c;
+}
+.cyber-callback .button {
+  flex-shrink: 0;
+}
+
+@media (max-width: 1100px) {
+  .cyber-soc-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 40px;
+  }
+  .cyber-hero {
+    max-width: 640px;
+  }
+  .cyber-services {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .cyber-assessment-steps {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    row-gap: 8px;
+  }
+  .cyber-assessment-steps > li:nth-child(even) .cyber-assessment-stem {
+    height: 36px;
+  }
+  .cyber-callback {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 760px) {
+  /* The comparison becomes stacked cards on narrow screens. */
+  .cyber-compare,
+  .cyber-compare tbody,
+  .cyber-compare tr,
+  .cyber-compare td,
+  .cyber-compare tbody th {
+    display: block;
+    width: 100%;
+  }
+  .cyber-compare thead {
+    display: none;
+  }
+  .cyber-compare tr {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+    overflow: hidden;
+    border-radius: 18px;
+    background: var(--tone);
+  }
+  .cyber-compare tbody th {
+    order: -1;
+    padding: 18px 18px 6px;
+  }
+  .cyber-compare td:first-child,
+  .cyber-compare td:last-child {
+    width: 100%;
+    border-radius: 0;
+    text-align: left;
+    padding: 12px 22px 16px;
+  }
+  .cyber-compare td::before {
+    content: attr(data-label);
+    display: block;
+    margin-bottom: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    opacity: 0.85;
+  }
+  .cyber-compare-aspect {
+    justify-content: flex-start;
+    min-height: 52px;
+  }
+}
+@media (max-width: 640px) {
+  .cyber-soc-layout {
+    padding-block: 64px;
+  }
+  .cyber-cycle,
+  .cyber-services,
+  .cyber-assessment-steps {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .cyber-assessment-steps > li {
+    flex-direction: row;
+    align-items: stretch;
+  }
+  .cyber-assessment-stem,
+  .cyber-assessment-steps > li:nth-child(even) .cyber-assessment-stem {
+    width: 0;
+    height: auto;
+  }
+  .cyber-assessment-card {
+    justify-items: start;
+    text-align: left;
+  }
+  .cyber-callback {
+    padding: 26px 22px;
+  }
+}

@@ -1,0 +1,155 @@
+/* How We Do It page. Shared hero and call to action live in inner-page.css. */
+
+.how-diagram-panel {
+  padding: 32px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 24px 60px #102d3e0f;
+}
+.how-diagram {
+  display: block;
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  margin-inline: auto;
+}
+
+/* Three steps, coloured to match the diagram. */
+.how-step-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+.how-step-grid > li,
+.how-step-reveal {
+  display: flex;
+}
+.how-step {
+  --tone: var(--blue);
+  width: 100%;
+  padding: 36px 34px 40px;
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--tone);
+  border-radius: 16px;
+  background: #fff;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+.how-step:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 60px #102d3e14;
+}
+.how-step-understand {
+  --tone: #2c2f66;
+}
+.how-step-tailor {
+  --tone: #18a94b;
+}
+.how-step-embed {
+  --tone: #1f78bb;
+}
+.how-step-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.how-step-icon {
+  display: inline-flex;
+  width: 52px;
+  height: 52px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--tone);
+  color: #fff;
+}
+.how-step-number {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.how-step h3 {
+  margin: 30px 0 14px;
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  color: var(--tone);
+}
+.how-step p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #3f525c;
+}
+
+/* Commitment */
+.how-commitment {
+  background: var(--pale);
+}
+.how-commitment-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: 72px;
+  align-items: start;
+}
+.how-commitment-panels {
+  display: grid;
+  gap: 20px;
+}
+.how-panel {
+  display: flex;
+  gap: 22px;
+  padding: 32px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fff;
+}
+.how-panel-icon {
+  display: inline-flex;
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: #e8f6ee;
+  color: var(--green);
+}
+.how-panel p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #3f525c;
+}
+
+@media (max-width: 1100px) {
+  .how-step-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .how-commitment-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 36px;
+  }
+  .how-diagram-panel {
+    max-width: 560px;
+  }
+}
+@media (max-width: 640px) {
+  .how-diagram-panel {
+    padding: 18px;
+  }
+  .how-step {
+    padding: 28px 24px 32px;
+  }
+  .how-panel {
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px;
+  }
+  .how-panel p {
+    font-size: 16px;
+  }
+}

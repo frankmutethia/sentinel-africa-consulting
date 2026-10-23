@@ -1,0 +1,246 @@
+/* Who We Are page. Shared hero and call to action live in inner-page.css. */
+
+/* Hero facts */
+.who-facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--line);
+  box-shadow: 0 24px 60px #102d3e0f;
+}
+.who-facts > div {
+  display: grid;
+  align-content: start;
+  gap: 6px;
+  padding: 28px 26px;
+  background: #fff;
+}
+.who-fact-icon {
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  background: #e8f6ee;
+  color: var(--green);
+}
+.who-facts dt {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.who-facts dd {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+/* Video and introduction */
+.who-video-frame {
+  overflow: hidden;
+  border-radius: 16px;
+  background: #000;
+  box-shadow: 0 30px 80px #102d3e24;
+}
+.who-video-frame video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+.who-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: 72px;
+  margin-top: 88px;
+}
+.who-body {
+  max-width: 68ch;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #3f525c;
+}
+.who-body + .who-body {
+  margin-top: 22px;
+}
+
+/* Approach and compass */
+.who-pillars {
+  background: var(--pale);
+}
+.who-pillar-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+.who-pillar-grid > .reveal {
+  display: flex;
+}
+.who-pillar {
+  position: relative;
+  width: 100%;
+  padding: 44px 44px 48px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fff;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+.who-pillar:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 60px #102d3e14;
+}
+.who-pillar-icon {
+  display: inline-flex;
+  width: 56px;
+  height: 56px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: var(--navy);
+  color: #fff;
+}
+.who-pillar-number {
+  position: absolute;
+  top: 44px;
+  right: 44px;
+  font-family: var(--font-display);
+  font-size: 14px;
+  color: var(--muted);
+}
+.sentinel-site .who-pillar h2 {
+  margin: 32px 0 18px;
+  font-size: clamp(24px, 2.2vw, 32px);
+}
+.who-pillar p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #3f525c;
+}
+.who-statement {
+  max-width: 980px;
+  margin: 96px auto 0;
+  font-family: var(--font-display);
+  font-size: clamp(24px, 2.6vw, 36px);
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: -0.03em;
+  text-align: center;
+}
+.who-statement span {
+  color: var(--blue);
+}
+
+/* Core values */
+.who-values-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  gap: 48px;
+  align-items: center;
+}
+.who-values-art {
+  padding: 40px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--pale);
+}
+.who-values-art img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.who-value-list {
+  display: grid;
+  gap: 14px;
+}
+.who-value {
+  --tone: var(--blue);
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 20px 22px;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--tone);
+  border-radius: 12px;
+  background: #fff;
+}
+.who-value-yellow {
+  --tone: #e6b712;
+}
+.who-value-teal {
+  --tone: #2a9d8a;
+}
+.who-value-orange {
+  --tone: #d2691e;
+}
+.who-value-blue {
+  --tone: #1592dc;
+}
+.who-value-icon {
+  display: inline-flex;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--tone) 14%, white);
+  color: var(--tone);
+}
+.who-value-name {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+@media (max-width: 1100px) {
+  .who-intro,
+  .who-values-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 48px;
+  }
+  .who-intro {
+    margin-top: 64px;
+    gap: 24px;
+  }
+}
+@media (max-width: 900px) {
+  .who-pillar-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .who-statement {
+    margin-top: 64px;
+  }
+}
+@media (max-width: 640px) {
+  .who-facts {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .who-facts > div {
+    padding: 22px 20px;
+  }
+  .who-video-frame {
+    border-radius: 10px;
+  }
+  .who-body {
+    font-size: 16px;
+  }
+  .who-pillar {
+    padding: 30px 24px 32px;
+  }
+  .who-pillar-number {
+    top: 30px;
+    right: 24px;
+  }
+  .who-values-art {
+    padding: 20px;
+  }
+}

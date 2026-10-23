@@ -1,0 +1,413 @@
+/* Consultancy page. Shared service blocks live in services.css. */
+
+/* Overview strip */
+.consult-overview {
+  border-bottom: 1px solid var(--line);
+}
+.consult-overview-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 56px;
+  align-items: center;
+  padding-block: 64px;
+}
+.consult-overview-text {
+  font-family: var(--font-display);
+  font-size: clamp(20px, 1.8vw, 26px);
+  line-height: 1.45;
+  letter-spacing: -0.02em;
+  color: var(--navy);
+}
+.consult-outcomes {
+  display: grid;
+  gap: 12px;
+}
+.consult-outcome {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--pale);
+  font-size: 16px;
+  font-weight: 600;
+}
+.consult-outcome > span {
+  display: inline-flex;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: var(--green);
+  color: #fff;
+}
+
+/* Vision and the two-fold view */
+.consult-vision {
+  background: linear-gradient(120deg, #0d2634, #12405a);
+  color: #fff;
+}
+.consult-vision-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 80px;
+  align-items: center;
+  padding-block: 104px;
+}
+.consult-quote > svg {
+  color: var(--green);
+}
+.consult-quote .eyebrow {
+  margin: 20px 0 16px;
+  color: #8fd3a8;
+}
+.consult-quote blockquote {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 2.8vw, 42px);
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -0.035em;
+}
+.consult-quote blockquote span {
+  color: #8fd3a8;
+}
+.consult-vision h2 {
+  margin-bottom: 24px;
+}
+.sentinel-site .consult-vision h2 {
+  font-size: clamp(22px, 2vw, 28px);
+}
+.consult-folds {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+.consult-folds li {
+  position: relative;
+  display: grid;
+  gap: 18px;
+  padding: 28px 26px 30px;
+  border: 1px solid #ffffff1f;
+  border-radius: 16px;
+  background: #ffffff0d;
+}
+.consult-fold-icon {
+  display: inline-flex;
+  width: 52px;
+  height: 52px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: #18a94b33;
+  color: #8fd3a8;
+}
+.consult-folds li:last-child .consult-fold-icon {
+  background: #087bb033;
+  color: #7cc7ec;
+}
+.consult-fold-number {
+  position: absolute;
+  top: 28px;
+  right: 26px;
+  font-family: var(--font-display);
+  font-size: 14px;
+  color: #ffffff80;
+}
+.consult-folds strong {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+/* Modus operandi */
+.consult-method {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+  overflow: hidden;
+  border-radius: 18px;
+}
+.consult-method > li {
+  position: relative;
+  display: flex;
+}
+/* Each step sits above the next so its chevron is not covered (the reveal animation
+   gives every step its own stacking context). */
+.consult-method > li:nth-child(1) {
+  z-index: 3;
+}
+.consult-method > li:nth-child(2) {
+  z-index: 2;
+}
+.consult-method > li:nth-child(3) {
+  z-index: 1;
+}
+.consult-step {
+  --tone: var(--blue);
+  position: relative;
+  display: grid;
+  width: 100%;
+  align-content: start;
+  gap: 8px;
+  padding: 34px 48px 36px 34px;
+  background: var(--tone);
+  color: #fff;
+}
+.consult-step-understand {
+  --tone: #2c2f66;
+}
+.consult-step-tailor {
+  --tone: #18a94b;
+}
+.consult-step-embed {
+  --tone: #1f78bb;
+}
+/* Chevron joining each step to the next. */
+.consult-method > li:not(:last-child) .consult-step::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -18px;
+  z-index: 1;
+  width: 36px;
+  height: 36px;
+  background: var(--tone);
+  transform: translateY(-50%) rotate(45deg);
+  border-radius: 4px;
+}
+.consult-step-number {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+.consult-step strong {
+  font-family: var(--font-display);
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+}
+.consult-step > span:last-child {
+  font-size: 15px;
+  opacity: 0.88;
+}
+.consult-method-footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
+  margin-top: 36px;
+}
+.consult-method-footer .text-link {
+  flex-shrink: 0;
+}
+
+/* ISO standards */
+.consult-standards {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 16px;
+}
+.consult-standards > li {
+  display: flex;
+}
+.consult-standard {
+  display: grid;
+  width: 100%;
+  align-content: start;
+  gap: 20px;
+  padding: 26px 24px 28px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fff;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s,
+    border-color 0.3s;
+}
+.consult-standard:hover {
+  transform: translateY(-4px);
+  border-color: #18a94b66;
+  box-shadow: 0 20px 50px #102d3e14;
+}
+.consult-standard > span {
+  display: inline-flex;
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: var(--navy);
+  color: #fff;
+}
+.consult-standard strong {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+/* Strategy documents: pinned introduction beside a grouped, numbered list. */
+.consult-documents {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: 72px;
+  align-items: start;
+}
+.consult-documents-intro {
+  position: sticky;
+  top: 140px;
+}
+.consult-documents-intro h2 {
+  margin-bottom: 24px;
+}
+.consult-documents-intro .button {
+  margin-top: 32px;
+}
+.consult-document-groups {
+  display: grid;
+  gap: 40px;
+}
+.consult-document-group h3 {
+  margin-bottom: 8px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid var(--navy);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--blue);
+}
+.consult-document-group li {
+  display: flex;
+  gap: 22px;
+  padding-block: 20px;
+  border-bottom: 1px solid var(--line);
+}
+.consult-document-number {
+  flex-shrink: 0;
+  width: 32px;
+  padding-top: 2px;
+  font-family: var(--font-display);
+  font-size: 15px;
+  color: var(--green);
+}
+.consult-document-group strong {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 600;
+}
+.consult-document-group p {
+  margin-top: 6px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #3f525c;
+}
+
+/* Closing collage and callback */
+.consult-change {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 72px;
+  align-items: center;
+}
+.consult-change h2 {
+  margin-bottom: 24px;
+}
+.consult-collage {
+  position: relative;
+  padding-bottom: 22%;
+}
+.consult-collage img {
+  display: block;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 30px 80px #102d3e24;
+}
+.consult-collage img:first-child {
+  width: 82%;
+}
+.consult-collage img:last-child {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 58%;
+  border: 6px solid #fff;
+}
+.consult-callback {
+  margin-top: 32px;
+  padding: 28px;
+  border-left: 4px solid var(--green);
+  border-radius: 0 14px 14px 0;
+  background: #fff;
+}
+.consult-callback p {
+  margin-bottom: 20px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #3f525c;
+}
+
+@media (max-width: 1100px) {
+  .consult-overview-layout,
+  .consult-vision-layout,
+  .consult-documents,
+  .consult-change {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 40px;
+  }
+  .consult-documents-intro {
+    position: static;
+  }
+  .consult-standards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (max-width: 900px) {
+  .consult-method {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .consult-method > li:not(:last-child) .consult-step::after {
+    top: auto;
+    right: auto;
+    bottom: -18px;
+    left: 34px;
+    transform: rotate(45deg);
+  }
+  .consult-step {
+    padding: 30px 28px 38px;
+  }
+  .consult-method-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 640px) {
+  .consult-overview-layout {
+    padding-block: 48px;
+  }
+  .consult-vision-layout {
+    padding-block: 64px;
+  }
+  .consult-folds,
+  .consult-standards {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .consult-standard {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 18px;
+  }
+  .consult-collage img:first-child {
+    width: 88%;
+  }
+  .consult-callback {
+    padding: 22px;
+  }
+}
