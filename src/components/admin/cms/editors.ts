@@ -5,7 +5,7 @@ import { homepage } from "@/content/homepage";
 import { offices } from "@/content/offices";
 import { members } from "@/content/team";
 import { roles } from "../../site/careers";
-import { headerNavigation, servicePages } from "../../site/navigation";
+import { headerNavigation, servicePages, toolPages, toolsPage } from "../../site/navigation";
 import { courseAreas } from "../../site/trainingCourses";
 import type { Block, ContentEditorDef, Field, Values } from "./types";
 import { extendedEditors } from "./extendedEditors";
@@ -486,8 +486,8 @@ const serviceSections: Record<string, Block[]> = {
       cards("items", "Assessments", "Assessment"),
     ]),
   ],
-  "automation-tools": [
-    layout("tools", "Tools", "Rodela Techhouse platforms shown on the page.", [
+  "software-products": [
+    layout("products", "Software products", "The products shown on the page.", [
       listOf(
         "items",
         "Tools",
@@ -527,7 +527,7 @@ const serviceEyebrows: Record<string, string> = {
   "managed-services": "Retainers – Long-term Managed Consultancy Services",
   training: "Book Both Public and In-house – Physical, Virtual, or Self Study",
   cybershield: "24/7 monitoring, detection, analysis and response",
-  "automation-tools": "Powered by Rodela Techhouse",
+  "software-products": "Compliance software",
   "rwanda-dpp-registration": "Your Fast-Track to Compliance!",
 };
 
@@ -535,7 +535,7 @@ const servicesEditor: ContentEditorDef = {
   id: "service-pages",
   overline: "Website pages",
   title: "Our Services",
-  description: "The six service pages listed under Our Services.",
+  description: "The service pages listed under Our Services.",
   pages: servicePages.map((page) => {
     const id = page.href.replaceAll("/", "");
     return {
@@ -554,26 +554,8 @@ const resourcesEditor: ContentEditorDef = {
   id: "resource-pages",
   overline: "Website pages",
   title: "Resources",
-  description: "Shop, Blog, Our SDG’s Commitment and Travel Advisory pages.",
+  description: "Blog and Our SDG’s Commitment pages.",
   pages: [
-    {
-      id: "shop",
-      label: "Shop",
-      url: "/shop/",
-      blocks: [
-        pageHeader("/shop/", "Certified self-study trainings", "Shop"),
-        layout("perks", "Why self-study", "The benefits strip.", [
-          cards("items", "Benefits", "Benefit"),
-        ]),
-        {
-          id: "catalogue",
-          label: "Self-study catalogue",
-          description: "Courses on sale.",
-          source: "live",
-          collection: { editor: "courses", label: "Course areas", count: courseAreas.length },
-        },
-      ],
-    },
     {
       id: "blog",
       label: "Blog",
@@ -624,6 +606,52 @@ const resourcesEditor: ContentEditorDef = {
         ]),
       ],
     },
+  ],
+};
+
+const toolsEditor: ContentEditorDef = {
+  id: "tool-pages",
+  overline: "Website pages",
+  title: "Tools",
+  description: "The Tools page and every self-service tool listed under the Tools menu.",
+  pages: [
+    {
+      id: "tools",
+      label: "Tools page",
+      url: toolsPage,
+      blocks: [
+        pageHeader(
+          toolsPage,
+          "Practical tools",
+          "Tools",
+          "Self-service tools from Sentinel Africa that help you check, prepare and act on risk and compliance requirements, backed by our consultants when you need them.",
+        ),
+        {
+          id: "tools",
+          label: "Tools listed",
+          description:
+            "Shown in the Tools menu, on the Tools page and in “Explore our other tools”.",
+          source: "live",
+          fields: [
+            listOf(
+              "items",
+              "Tools",
+              "Tool",
+              [
+                text("label", "Tool name"),
+                text("category", "Category", "For example “Travel risk”."),
+                long("summary", "Summary"),
+                text("href", "Page address", "The tool’s page, for example /travel-advisory/."),
+                text("interest", "Callback form option"),
+                text("badge", "Badge", "For example “New”. Leave empty for none."),
+              ],
+              "label",
+            ),
+          ],
+          values: { items: toolPages.map((tool) => ({ badge: "", ...tool })) },
+        },
+      ],
+    },
     {
       id: "travel",
       label: "Travel Advisory",
@@ -637,6 +665,53 @@ const resourcesEditor: ContentEditorDef = {
           source: "live",
           collection: { editor: "travel", label: "Travel advisories workspace", count: 0 },
         },
+      ],
+    },
+    {
+      id: "rwanda-dpp-registration",
+      label: "Rwanda DPP Registration",
+      url: "/rwanda-dpp-registration/",
+      blocks: [
+        pageHeader(
+          "/rwanda-dpp-registration/",
+          serviceEyebrows["rwanda-dpp-registration"] ?? "",
+          "Rwanda DPP Registration",
+        ),
+        ...(serviceSections["rwanda-dpp-registration"] ?? []),
+      ],
+    },
+    {
+      id: "certification-planner",
+      label: "Certification Planner",
+      url: "/certification-planner/",
+      blocks: [
+        pageHeader(
+          "/certification-planner/",
+          "How ready are you for ISO certification?",
+          "Certification Readiness & Implementation Planner",
+          "Understand your management system’s current maturity, identify priority gaps and estimate the people, effort and time needed to implement an effective ISO management system.",
+        ),
+        layout(
+          "standards",
+          "Standards and questions",
+          "The standards visitors can assess and the readiness questions for each.",
+          [
+            listOf(
+              "items",
+              "Standards",
+              "Standard",
+              [
+                text("name", "Standard and edition"),
+                text("area", "Area"),
+                { key: "questions", label: "Readiness questions", type: "paragraphs", wide: true },
+              ],
+              "name",
+            ),
+          ],
+        ),
+        layout("quotation", "Quotation requests", "Where quotation requests are sent.", [
+          { key: "email", label: "Send requests to", type: "email" },
+        ]),
       ],
     },
   ],
@@ -834,7 +909,7 @@ const articlesEditor = collection(
 const coursesEditor = collection(
   "courses",
   "Training courses",
-  "The certification catalogue on the Training and Shop pages.",
+  "The certification catalogue on the Training page.",
   "/training/#courses",
   listOf(
     "items",
@@ -1312,7 +1387,7 @@ for (const editor of [aboutEditor, servicesEditor, careersEditor]) {
   }
 }
 
-populatePageContexts([aboutEditor, servicesEditor, resourcesEditor, careersEditor]);
+populatePageContexts([aboutEditor, servicesEditor, resourcesEditor, toolsEditor, careersEditor]);
 
 export const contentEditors: ContentEditorDef[] = [
   ...extendedEditors,
@@ -1320,6 +1395,7 @@ export const contentEditors: ContentEditorDef[] = [
   aboutEditor,
   servicesEditor,
   resourcesEditor,
+  toolsEditor,
   careersEditor,
   articlesEditor,
   coursesEditor,

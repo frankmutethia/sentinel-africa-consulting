@@ -35,7 +35,7 @@ const endpoints = [
   [
     "GET / POST",
     "/api/admin/collections/:collection",
-    "List or create articles, people, partners, courses, products, events, jobs and testimonials",
+    "List or create articles, people, partners, courses, events, jobs and testimonials",
   ],
   [
     "PATCH / DELETE",

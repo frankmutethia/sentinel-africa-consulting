@@ -240,7 +240,7 @@
     gap: 13px;
   }
 }
-/* Narrow phones: the tagline gives way so Shop, the icons and Staff Login stay on one line. */
+/* Narrow phones: the tagline gives way so Staff Login keeps its place on the bar. */
 @media (max-width: 400px) {
   .restored-header .utility-mobile-tagline {
     display: none;
@@ -346,4 +346,9 @@
 }
 .restored-header .desktop-nav a.nav-direct-link[aria-current="page"]::after {
   transform: scaleX(1);
+}
+.restored-header .nav-link-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }

@@ -16,10 +16,10 @@ import {
   PanelsTopLeft,
   Plane,
   Settings,
-  ShoppingBag,
   UserCog,
   UserRound,
   Users,
+  Wrench,
   type LucideIcon,
 } from "lucide-react";
 
@@ -80,12 +80,6 @@ export const adminNavigation: { heading: string; sections: AdminSection[] }[] = 
         icon: CalendarCheck,
         summary: "Public and in-house course bookings, delegates and payment status.",
       },
-      {
-        id: "orders",
-        label: "Shop orders",
-        icon: ShoppingBag,
-        summary: "Self-study course purchases from the shop and their fulfilment.",
-      },
     ],
   },
   {
@@ -119,13 +113,20 @@ export const adminNavigation: { heading: string; sections: AdminSection[] }[] = 
         id: "service-pages",
         label: "Our Services",
         icon: Layers,
-        summary: "The six service pages.",
+        summary: "The service pages listed under Our Services.",
       },
       {
         id: "resource-pages",
         label: "Resources",
         icon: LibraryBig,
-        summary: "Shop, Blog and Our SDG’s Commitment pages.",
+        summary: "Blog and Our SDG’s Commitment pages.",
+      },
+      {
+        id: "tool-pages",
+        label: "Tools",
+        icon: Wrench,
+        summary:
+          "The Tools page and every tool: Travel Advisory, Rwanda DPP Registration and the Certification Planner.",
       },
       {
         id: "career-pages",
@@ -152,12 +153,6 @@ export const adminNavigation: { heading: string; sections: AdminSection[] }[] = 
         summary: "Event dates, venues and registration details.",
       },
       {
-        id: "products",
-        label: "Shop products",
-        icon: ShoppingBag,
-        summary: "Products, pricing and availability.",
-      },
-      {
         id: "articles",
         label: "Blog articles",
         icon: Newspaper,
@@ -167,7 +162,7 @@ export const adminNavigation: { heading: string; sections: AdminSection[] }[] = 
         id: "courses",
         label: "Training courses",
         icon: GraduationCap,
-        summary: "The certification catalogue shown on the Training and Shop pages.",
+        summary: "The certification catalogue shown on the Training page.",
       },
       {
         id: "people",

@@ -1109,28 +1109,27 @@
       ]
     }
   },
-  "automation-tools": {
+  "software-products": {
     "hero": {
       "trail": ["Our Services"],
-      "eyebrow": "Powered by Rodela Techhouse",
-      "title": "Automation Tools",
-      "lead": "Three compliance platforms from our technology partner, Rodela Techhouse, take you from your first ISO 27001 gap assessment to a connected governance, risk and compliance programme."
+      "eyebrow": "Compliance software",
+      "title": "Our Software Products",
+      "lead": "Three compliance platforms that take you from your first ISO 27001 gap assessment to a connected governance, risk and compliance programme, with Sentinel Africa’s consultants beside you at every step."
     },
     "media": {
       "gapAssessShot": "/src/assets/services/gapassess-platform.webp",
       "ismsShot": "/src/assets/services/sentinel-isms-platform.webp",
-      "strataOneShot": "/src/assets/services/strataone-platform.webp",
-      "rodelaLogo": "/src/assets/logos/rodela-logo.png"
+      "strataOneShot": "/src/assets/services/strataone-platform.webp"
     },
     "sections": [
       {
-        "id": "tools",
+        "id": "products",
         "label": "From first assessment",
         "headings": ["From first assessment"],
-        "paragraphs": ["How the tools fit together"],
+        "paragraphs": ["How the products fit together"],
         "lists": [
           {
-            "key": "tools",
+            "key": "products",
             "items": [
               {
                 "id": "gapassess",
@@ -1138,12 +1137,14 @@
                 "step": "Assess",
                 "category": "ISO 27001 gap assessment",
                 "tagline": "Know exactly where you stand.",
-                "text": "Evaluate your information security posture against ISO/IEC 27001:2022. GapAssess identifies the gaps, scores your maturity and generates reports, giving you a clear path to certification readiness.",
+                "text": "GapAssess evaluates your information security posture against the requirements of ISO/IEC 27001:2022. It shows where you fall short, scores the maturity of each area and turns the results into reports you can act on, so you know exactly what stands between you and certification.",
+                "audience": "Organisations starting an ISO 27001 programme, re-baselining an existing one or preparing for a certification audit.",
                 "features": [
-                  "Assessment against ISO/IEC 27001:2022",
-                  "Gap identification and maturity scoring",
-                  "Reports for management and auditors",
-                  "Secured with multi-factor authentication"
+                  "Structured assessment against ISO/IEC 27001:2022",
+                  "Gap identification with maturity scoring for each area",
+                  "Reports ready for management and auditors",
+                  "A clear, prioritised path to certification readiness",
+                  "Secure sign-in with multi-factor authentication"
                 ],
                 "url": "https://gap-assessment.rodelatech.com/login",
                 "visit": "Open GapAssess",
@@ -1155,12 +1156,15 @@
                 "step": "Implement",
                 "category": "ISO 27001 compliance automation",
                 "tagline": "Run your ISMS with precision and confidence.",
-                "text": "An enterprise ISMS automation platform for managing ISO 27001:2022 implementations, risk assessments, internal audits and Annex A controls across multiple organisations. Built for government ministries, departments and agencies, and organisations across East Africa.",
+                "text": "An enterprise platform for implementing and running an information security management system. It manages ISO 27001:2022 implementations, risk assessments, internal audits and Annex A controls, across one organisation or many, with pre-configured templates and workflows that get your ISMS running in weeks rather than months.",
+                "audience": "Government ministries, departments and agencies, and organisations running ISO 27001 across several entities in Kenya, Rwanda and East Africa.",
                 "features": [
                   "All 10 clauses of ISO 27001:2022 and the 93 Annex A controls",
-                  "Multi-organisation management for ministries, departments and agencies",
+                  "Deployment in 4–6 weeks with pre-configured templates and workflows",
+                  "Multi-organisation management from a single platform",
                   "Role-based access for platform, organisation and department users",
-                  "Central documents, audit trails and compliance reports on demand"
+                  "Central document management for policies and procedures",
+                  "Live dashboards, full audit trails and compliance reports on demand"
                 ],
                 "url": "https://isms.rodelatech.com/",
                 "visit": "Visit the ISMS Platform",
@@ -1172,13 +1176,15 @@
                 "step": "Connect and grow",
                 "category": "Connected GRC solutions",
                 "tagline": "Bring governance, risk and compliance into alignment.",
-                "text": "StrataOne brings your management systems into one workspace. Define your organisation’s context, people and documents once and build on them across every standard, with a dedicated internal audit workspace for audit firms.",
+                "text": "StrataOne brings your management systems into one workspace. Define your organisation’s context, people and documents once and build on them across every standard, from risk treatment and control assessment to internal audit and management review, with every document versioned and formally approved.",
+                "audience": "Organisations running more than one management system, and audit firms that audit across several clients.",
                 "features": [
                   "ISO/IEC 27001 information security management system",
                   "ISO/IEC 42001:2023 artificial intelligence management system",
+                  "Shared organisation context, people and documents across standards",
                   "Risk assessment and treatment with clear ownership",
                   "Versioned documents, formal approvals and a full audit trail",
-                  "Internal Audit workspace, with a 30-day free trial"
+                  "Internal Audit workspace for audit firms, with a 30-day free trial"
                 ],
                 "url": "https://strataone.tech/",
                 "visit": "Visit StrataOne",
@@ -1193,25 +1199,70 @@
         "id": "section-2",
         "label": "Page section",
         "headings": [],
-        "paragraphs": ["0 ·"],
+        "paragraphs": ["0 ·", "Who it’s for"],
         "lists": [],
+        "images": []
+      },
+      {
+        "id": "support",
+        "label": "Software is only part of the answer.",
+        "headings": ["Software is only part of the answer."],
+        "paragraphs": ["Implementation and support"],
+        "lists": [
+          {
+            "key": "support",
+            "items": [
+              {
+                "title": "Guided setup",
+                "text": "We configure each product around your scope, structure and existing documentation.",
+                "link": {
+                  "label": "Talk to our team"
+                }
+              },
+              {
+                "title": "Training for your team",
+                "text": "Certified ISO 27001 and data protection training, so your people use the tools with confidence.",
+                "link": {
+                  "label": "Training"
+                }
+              },
+              {
+                "title": "Expert assessments and audits",
+                "text": "Our consultants review the results with you and lead internal audits when you need them.",
+                "link": {
+                  "label": "Consultancy"
+                }
+              },
+              {
+                "title": "Ongoing support",
+                "text": "Keep your management system current through a long-term managed services retainer.",
+                "link": {
+                  "label": "Managed Services"
+                }
+              }
+            ]
+          }
+        ],
         "images": []
       }
     ],
     "constants": {
-      "tools": [
+      "pageLabel": "Our Software Products",
+      "products": [
         {
           "id": "gapassess",
           "name": "GapAssess",
           "step": "Assess",
           "category": "ISO 27001 gap assessment",
           "tagline": "Know exactly where you stand.",
-          "text": "Evaluate your information security posture against ISO/IEC 27001:2022. GapAssess identifies the gaps, scores your maturity and generates reports, giving you a clear path to certification readiness.",
+          "text": "GapAssess evaluates your information security posture against the requirements of ISO/IEC 27001:2022. It shows where you fall short, scores the maturity of each area and turns the results into reports you can act on, so you know exactly what stands between you and certification.",
+          "audience": "Organisations starting an ISO 27001 programme, re-baselining an existing one or preparing for a certification audit.",
           "features": [
-            "Assessment against ISO/IEC 27001:2022",
-            "Gap identification and maturity scoring",
-            "Reports for management and auditors",
-            "Secured with multi-factor authentication"
+            "Structured assessment against ISO/IEC 27001:2022",
+            "Gap identification with maturity scoring for each area",
+            "Reports ready for management and auditors",
+            "A clear, prioritised path to certification readiness",
+            "Secure sign-in with multi-factor authentication"
           ],
           "url": "https://gap-assessment.rodelatech.com/login",
           "visit": "Open GapAssess",
@@ -1223,12 +1274,15 @@
           "step": "Implement",
           "category": "ISO 27001 compliance automation",
           "tagline": "Run your ISMS with precision and confidence.",
-          "text": "An enterprise ISMS automation platform for managing ISO 27001:2022 implementations, risk assessments, internal audits and Annex A controls across multiple organisations. Built for government ministries, departments and agencies, and organisations across East Africa.",
+          "text": "An enterprise platform for implementing and running an information security management system. It manages ISO 27001:2022 implementations, risk assessments, internal audits and Annex A controls, across one organisation or many, with pre-configured templates and workflows that get your ISMS running in weeks rather than months.",
+          "audience": "Government ministries, departments and agencies, and organisations running ISO 27001 across several entities in Kenya, Rwanda and East Africa.",
           "features": [
             "All 10 clauses of ISO 27001:2022 and the 93 Annex A controls",
-            "Multi-organisation management for ministries, departments and agencies",
+            "Deployment in 4–6 weeks with pre-configured templates and workflows",
+            "Multi-organisation management from a single platform",
             "Role-based access for platform, organisation and department users",
-            "Central documents, audit trails and compliance reports on demand"
+            "Central document management for policies and procedures",
+            "Live dashboards, full audit trails and compliance reports on demand"
           ],
           "url": "https://isms.rodelatech.com/",
           "visit": "Visit the ISMS Platform",
@@ -1240,24 +1294,60 @@
           "step": "Connect and grow",
           "category": "Connected GRC solutions",
           "tagline": "Bring governance, risk and compliance into alignment.",
-          "text": "StrataOne brings your management systems into one workspace. Define your organisation’s context, people and documents once and build on them across every standard, with a dedicated internal audit workspace for audit firms.",
+          "text": "StrataOne brings your management systems into one workspace. Define your organisation’s context, people and documents once and build on them across every standard, from risk treatment and control assessment to internal audit and management review, with every document versioned and formally approved.",
+          "audience": "Organisations running more than one management system, and audit firms that audit across several clients.",
           "features": [
             "ISO/IEC 27001 information security management system",
             "ISO/IEC 42001:2023 artificial intelligence management system",
+            "Shared organisation context, people and documents across standards",
             "Risk assessment and treatment with clear ownership",
             "Versioned documents, formal approvals and a full audit trail",
-            "Internal Audit workspace, with a 30-day free trial"
+            "Internal Audit workspace for audit firms, with a 30-day free trial"
           ],
           "url": "https://strataone.tech/",
           "visit": "Visit StrataOne",
           "shot": "/src/assets/services/strataone-platform.webp"
+        }
+      ],
+      "support": [
+        {
+          "title": "Guided setup",
+          "text": "We configure each product around your scope, structure and existing documentation.",
+          "link": {
+            "label": "Talk to our team"
+          }
+        },
+        {
+          "title": "Training for your team",
+          "text": "Certified ISO 27001 and data protection training, so your people use the tools with confidence.",
+          "link": {
+            "label": "Training"
+          }
+        },
+        {
+          "title": "Expert assessments and audits",
+          "text": "Our consultants review the results with you and lead internal audits when you need them.",
+          "link": {
+            "label": "Consultancy"
+          }
+        },
+        {
+          "title": "Ongoing support",
+          "text": "Keep your management system current through a long-term managed services retainer.",
+          "link": {
+            "label": "Managed Services"
+          }
         }
       ]
     }
   },
   "rwanda-dpp-registration": {
     "hero": {
-      "trail": ["Our Services"],
+      "trail": [
+        {
+          "label": "Tools"
+        }
+      ],
       "eyebrow": "Your Fast-Track to Compliance!",
       "title": "Rwanda DPP Registration",
       "lead": "Introducing Sentinel Africa’s Rwanda DPP Registration Accelerator – Your Fast-Track to Compliance! Welcome to the Rwanda DPP Registration Accelerator, a cutting-edge solution designed to streamline and expedite registration so as to comply with the DPP law in Rwanda."
@@ -1427,72 +1517,6 @@
         {
           "text": "DPO’s Letter of Appointment",
           "template": true
-        }
-      ]
-    }
-  },
-  "shop": {
-    "hero": {
-      "trail": ["Resources"],
-      "eyebrow": "Certified self-study trainings",
-      "title": "Shop",
-      "lead": "Explore Knowledge in the Digital Era: Your Gateway to Seamless Learning and Discovery!"
-    },
-    "media": {
-      "shopBanner": "/src/assets/services/shop-banner.jpg"
-    },
-    "sections": [
-      {
-        "id": "section-1",
-        "label": "Why self-study",
-        "headings": [],
-        "paragraphs": [],
-        "lists": [
-          {
-            "key": "perks",
-            "items": [
-              {
-                "title": "Learn at your pace",
-                "text": "Study when and where it suits you."
-              },
-              {
-                "title": "Fully online",
-                "text": "Course material available wherever you are."
-              },
-              {
-                "title": "Certification ready",
-                "text": "Prepare for internationally recognized certifications."
-              }
-            ]
-          }
-        ],
-        "images": []
-      },
-      {
-        "id": "catalogue",
-        "label": "Certified self-study",
-        "headings": ["Certified self-study"],
-        "paragraphs": [
-          "Self-study catalogue",
-          "Prefer a classroom? We also run physical and virtual instructor-led classes, public and in-house."
-        ],
-        "lists": [],
-        "images": []
-      }
-    ],
-    "constants": {
-      "perks": [
-        {
-          "title": "Learn at your pace",
-          "text": "Study when and where it suits you."
-        },
-        {
-          "title": "Fully online",
-          "text": "Course material available wherever you are."
-        },
-        {
-          "title": "Certification ready",
-          "text": "Prepare for internationally recognized certifications."
         }
       ]
     }

@@ -1,16 +1,7 @@
 import type { ReactNode } from "react";
-import {
-  ArrowUpRight,
-  Bot,
-  Briefcase,
-  Check,
-  FileCheck2,
-  GraduationCap,
-  Handshake,
-  ShieldHalf,
-  type LucideIcon,
-} from "lucide-react";
-import { servicePages } from "./navigation";
+import { ArrowUpRight, Briefcase, Check, type LucideIcon } from "lucide-react";
+import { servicePages, toolPages } from "./navigation";
+import { pageIcons } from "./pageIcons";
 import { Reveal } from "./Reveal";
 import "./services.css";
 
@@ -144,43 +135,70 @@ export function MediaSplit({
   );
 }
 
-const serviceIcons: Record<string, LucideIcon> = {
-  Consultancy: Briefcase,
-  "Managed Services": Handshake,
-  Training: GraduationCap,
-  Cybershield: ShieldHalf,
-  "Automation Tools": Bot,
-  "Rwanda DPP Registration": FileCheck2,
-};
-
-/** Links to the other service pages, shown at the end of each one. */
-export function OtherServices({ current }: { current: string }) {
+/** Links to the sibling pages in a group, shown at the end of each page in it. */
+function RelatedPages({
+  id,
+  eyebrow,
+  title,
+  pages,
+  current,
+}: {
+  id: string;
+  eyebrow: string;
+  title: string;
+  pages: readonly { label: string; href: string }[];
+  current: string;
+}) {
+  const others = pages.filter((page) => page.label !== current);
+  if (!others.length) return null;
   return (
-    <section className="svc-others" aria-labelledby="other-services-title">
+    <section className="svc-others" aria-labelledby={id}>
       <div className="site-container">
         <div className="svc-others-head">
-          <p className="eyebrow">Our services</p>
-          <h2 id="other-services-title">Explore our other services</h2>
+          <p className="eyebrow">{eyebrow}</p>
+          <h2 id={id}>{title}</h2>
         </div>
         <ul className="svc-others-list">
-          {servicePages
-            .filter((page) => page.label !== current)
-            .map((page) => {
-              const Icon = serviceIcons[page.label] ?? Briefcase;
-              return (
-                <li key={page.href}>
-                  <a href={page.href}>
-                    <span className="svc-others-icon">
-                      <Icon size={22} strokeWidth={1.6} aria-hidden="true" />
-                    </span>
-                    <strong>{page.label}</strong>
-                    <ArrowUpRight size={18} aria-hidden="true" className="svc-others-arrow" />
-                  </a>
-                </li>
-              );
-            })}
+          {others.map((page) => {
+            const Icon = pageIcons[page.label] ?? Briefcase;
+            return (
+              <li key={page.href}>
+                <a href={page.href}>
+                  <span className="svc-others-icon">
+                    <Icon size={22} strokeWidth={1.6} aria-hidden="true" />
+                  </span>
+                  <strong>{page.label}</strong>
+                  <ArrowUpRight size={18} aria-hidden="true" className="svc-others-arrow" />
+                </a>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </section>
+  );
+}
+
+export function OtherServices({ current }: { current: string }) {
+  return (
+    <RelatedPages
+      id="other-services-title"
+      eyebrow="Our services"
+      title="Explore our other services"
+      pages={servicePages}
+      current={current}
+    />
+  );
+}
+
+export function OtherTools({ current }: { current: string }) {
+  return (
+    <RelatedPages
+      id="other-tools-title"
+      eyebrow="Tools"
+      title="Explore our other tools"
+      pages={toolPages}
+      current={current}
+    />
   );
 }

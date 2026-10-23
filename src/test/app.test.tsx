@@ -8,8 +8,7 @@ import WhyWeDoItPage from "@/components/site/WhyWeDoItPage";
 import WhoWeArePage from "@/components/site/WhoWeArePage";
 import BlogPage from "@/components/site/BlogPage";
 import SdgPage from "@/components/site/SdgPage";
-import ShopPage from "@/components/site/ShopPage";
-import AutomationToolsPage from "@/components/site/AutomationToolsPage";
+import SoftwareProductsPage from "@/components/site/SoftwareProductsPage";
 import ConsultancyPage from "@/components/site/ConsultancyPage";
 import CybershieldPage from "@/components/site/CybershieldPage";
 import ManagedServicesPage from "@/components/site/ManagedServicesPage";
@@ -20,6 +19,13 @@ import ForgotPasswordPage from "@/components/staff/ForgotPasswordPage";
 import AdminPage from "@/components/admin/AdminPage";
 import TravelAdvisoryPage from "@/components/travel/TravelAdvisoryPage";
 import CareersPage from "@/components/site/CareersPage";
+import ToolsPage from "@/components/site/ToolsPage";
+import CertificationPlannerPage from "@/components/tools/CertificationPlannerPage";
+import {
+  buildQuestions,
+  computeReport,
+  durationQuestions,
+} from "@/components/tools/certificationPlanner";
 import TalentShieldPage from "@/components/site/TalentShieldPage";
 import { buildReport, travelData, type Requirement } from "@/components/travel/travelAdvisory";
 import { goTo } from "@/components/staff/session";
@@ -75,7 +81,7 @@ describe("Sentinel website", () => {
     expect(toggle).toHaveAttribute("aria-expanded", "false");
   });
 
-  it("keeps every link inside this project, apart from social profiles, the DPP questionnaire and Rodela's platforms", () => {
+  it("keeps every link inside this project, apart from social profiles, the DPP questionnaire and our software products", () => {
     for (const page of [
       <App key="home" />,
       <WhoWeArePage key="who" />,
@@ -87,12 +93,13 @@ describe("Sentinel website", () => {
       <ManagedServicesPage key="managed" />,
       <TrainingPage key="training" />,
       <CybershieldPage key="cybershield" />,
-      <AutomationToolsPage key="automation" />,
+      <SoftwareProductsPage key="software" />,
       <RwandaDppPage key="dpp" />,
-      <ShopPage key="shop" />,
       <BlogPage key="blog" />,
       <SdgPage key="sdg" />,
       <CareersPage key="careers" />,
+      <ToolsPage key="tools" />,
+      <CertificationPlannerPage key="planner" />,
       <TalentShieldPage key="talent" />,
       <StaffLoginPage key="login" />,
       <ForgotPasswordPage key="forgot" />,
@@ -119,10 +126,7 @@ describe("Sentinel website", () => {
       "href",
       "/cybershield/",
     );
-    expect(within(nav).getByRole("link", { name: "Rwanda DPP Registration" })).toHaveAttribute(
-      "href",
-      "/rwanda-dpp-registration/",
-    );
+    expect(within(nav).queryByRole("link", { name: "Rwanda DPP Registration" })).toBeNull();
     fireEvent.keyDown(document, { key: "Escape" });
     expect(trigger).toHaveAttribute("aria-expanded", "false");
     expect(trigger).toHaveFocus();
@@ -317,7 +321,7 @@ describe("Our Team page", () => {
 });
 
 describe("Our Services pages", () => {
-  it("lists all six services under the renamed menu", () => {
+  it("lists the five services under the renamed menu", () => {
     render(<App />);
     const nav = screen.getByRole("navigation", { name: "Main navigation" });
     expect(within(nav).queryByRole("button", { name: "What we do" })).not.toBeInTheDocument();
@@ -330,8 +334,7 @@ describe("Our Services pages", () => {
       ["Managed Services", "/managed-services/"],
       ["Training", "/training/"],
       ["Cybershield", "/cybershield/"],
-      ["Automation Tools", "/automation-tools/"],
-      ["Rwanda DPP Registration", "/rwanda-dpp-registration/"],
+      ["Our Software Products", "/software-products/"],
     ]);
   });
 
@@ -340,7 +343,7 @@ describe("Our Services pages", () => {
     [ManagedServicesPage, "Managed Services", /80% of SMEs lack sufficient capacity/],
     [TrainingPage, "Training", /affiliated training center with renowned certification bodies/],
     [CybershieldPage, "Cybershield", /24\/7” monitoring, detection, analysis/],
-    [AutomationToolsPage, "Automation Tools", /our technology partner, Rodela Techhouse/],
+    [SoftwareProductsPage, "Our Software Products", /first ISO 27001 gap assessment/],
     [RwandaDppPage, "Rwanda DPP Registration", /Article 29 of Rwanda’s Personal Data Protection/],
   ])("renders the %#th service page with its published copy", (Page, title, copy) => {
     const { container } = render(<Page />);
@@ -487,25 +490,33 @@ describe("Cybershield and Rwanda DPP pages", () => {
 });
 
 describe("Resources pages", () => {
-  it("links Shop, Blog and Our SDG’s Commitment from the Resources menu and the top bar", () => {
-    render(<App />);
+  it("links Blog and Our SDG’s Commitment from the Resources menu, with no shop anywhere", () => {
+    const { container } = render(<App />);
     const nav = screen.getByRole("navigation", { name: "Main navigation" });
     fireEvent.click(within(nav).getByRole("button", { name: "Resources" }));
-    expect(within(nav).getByRole("link", { name: "Shop" })).toHaveAttribute("href", "/shop/");
-    expect(within(nav).getByRole("link", { name: "Blog" })).toHaveAttribute("href", "/blog/");
-    expect(within(nav).getByRole("link", { name: "Our SDG’s Commitment" })).toHaveAttribute(
-      "href",
-      "/our-sdgs-commitment/",
-    );
-    const topBar = screen.getByRole("navigation", { name: "Shop and account" });
-    expect(within(topBar).getByRole("link", { name: "Shop" })).toHaveAttribute("href", "/shop/");
+    const resources = within(nav)
+      .getAllByRole("link")
+      .filter((link) => link.closest(".nav-dropdown.is-open"))
+      .map((link) => link.textContent);
+    expect(resources).toEqual(["Blog", "Our SDG’s Commitment"]);
+    const topBar = screen.getByRole("navigation", { name: "Staff access" });
+    expect(
+      within(topBar)
+        .getAllByRole("link")
+        .map((link) => link.textContent),
+    ).toEqual(["Staff Login"]);
+    expect(container.querySelector('a[href^="/shop"]')).toBeNull();
+    expect(screen.queryByLabelText(/Shopping cart/)).toBeNull();
   });
 
-  it("lists the self-study catalogue in the shop", () => {
-    render(<ShopPage />);
-    expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent("Shop");
-    expect(screen.getByText(/Explore Knowledge in the Digital Era/)).toBeInTheDocument();
-    expect(screen.getAllByText("Self-study")).toHaveLength(16);
+  it("shows the Rwanda office at YYUSSA City Center", () => {
+    render(<App />);
+    expect(
+      screen.getByText(
+        "YYUSSA City Center, Tower A, 9th Floor, KN 4 Avenue, Kiyovu, Nyarugenge, Kigali, Rwanda",
+      ),
+    ).toBeInTheDocument();
+    expect(screen.queryByText(/KG688/)).toBeNull();
   });
 
   it("shows the three goals with the published gender split and commitments", () => {
@@ -566,11 +577,11 @@ describe("Navigation aids", () => {
     }
   });
 
-  it("ends each service page with links to the other five services", () => {
+  it("ends each service page with links to the other four services", () => {
     render(<CybershieldPage />);
     const strip = screen.getByRole("region", { name: "Explore our other services" });
     const links = within(strip).getAllByRole("link");
-    expect(links).toHaveLength(5);
+    expect(links).toHaveLength(4);
     expect(links.map((link) => link.textContent)).not.toContain("Cybershield");
   });
 });
@@ -712,23 +723,22 @@ describe("Travel Advisory", () => {
     ...overrides,
   });
 
-  it("is linked from the main menu, without opening a dropdown, and from the footer", () => {
+  it("is listed under the Tools menu with its New badge", () => {
     render(<App />);
     const nav = screen.getByRole("navigation", { name: "Main navigation" });
+    fireEvent.click(within(nav).getByRole("button", { name: "Tools" }));
     const link = within(nav).getByRole("link", { name: /^Travel Advisory/ });
     expect(link).toHaveAttribute("href", "/travel-advisory/");
     expect(link).toHaveTextContent("New");
-    const footer = screen.getByRole("navigation", { name: "Footer navigation" });
-    expect(within(footer).getByRole("link", { name: "Travel Advisory" })).toHaveAttribute(
-      "href",
-      "/travel-advisory/",
-    );
   });
 
-  it("marks Travel Advisory as the current page in the menu", () => {
+  it("marks Tools as the current menu on the Travel Advisory page", () => {
     window.history.pushState({}, "", "/travel-advisory/");
     render(<TravelAdvisoryPage />);
     const nav = screen.getByRole("navigation", { name: "Main navigation" });
+    const tools = within(nav).getByRole("button", { name: "Tools" });
+    expect(tools.parentElement).toHaveClass("is-current");
+    fireEvent.click(tools);
     expect(within(nav).getByRole("link", { name: /^Travel Advisory/ })).toHaveAttribute(
       "aria-current",
       "page",
@@ -1031,9 +1041,9 @@ describe("WHO Disease Outbreak News", () => {
   });
 });
 
-describe("Automation Tools page", () => {
-  it("presents Rodela's three platforms in order, each opening its own site safely", () => {
-    const { container } = render(<AutomationToolsPage />);
+describe("Our Software Products page", () => {
+  it("presents the three products in order, each opening its own site safely", () => {
+    const { container } = render(<SoftwareProductsPage />);
     expect(container).not.toHaveTextContent(/KnowBe4|Isorobot/i);
     const path = container.querySelector<HTMLElement>(".tools-path")!;
     expect(
@@ -1054,10 +1064,23 @@ describe("Automation Tools page", () => {
       expect(visit).toHaveAttribute("rel", "noreferrer");
       expect(within(section).getByRole("link", { name: /Request a demo/ })).toHaveAttribute(
         "href",
-        "/?interest=Automation%20Tools#contact",
+        "/?interest=Our%20Software%20Products#contact",
       );
+      expect(within(section).getByText("Who it’s for")).toBeInTheDocument();
     }
-    expect(screen.getByAltText("Rodela")).toBeInTheDocument();
+    // The products are presented as Sentinel Africa’s own; only their link targets name a host.
+    expect(container).not.toHaveTextContent(/Rodela/i);
+    expect(container.querySelector('img[alt*="Rodela" i]')).toBeNull();
+    expect(
+      screen.getByRole("heading", { name: /Software is only part of the answer/ }),
+    ).toBeInTheDocument();
+  });
+
+  it("is listed under Our Services and selectable in the callback form", () => {
+    window.history.pushState({}, "", "/?interest=Our%20Software%20Products");
+    render(<App />);
+    expect(screen.getByLabelText("I’m interested in")).toHaveValue("Our Software Products");
+    window.history.pushState({}, "", "/");
   });
 });
 
@@ -1273,7 +1296,7 @@ describe("Content management in the staff console", () => {
   it("switches between the pages of a group", () => {
     open("service-pages");
     const tabs = screen.getByRole("tablist", { name: "Our Services pages" });
-    expect(within(tabs).getAllByRole("tab")).toHaveLength(6);
+    expect(within(tabs).getAllByRole("tab")).toHaveLength(5);
     fireEvent.click(within(tabs).getByRole("tab", { name: "Cybershield" }));
     expect(screen.getByLabelText("Page title")).toHaveValue("Cybershield");
   });
@@ -1292,4 +1315,174 @@ describe("Content management in the staff console", () => {
     expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent("Media library");
     expect(document.querySelectorAll(".cms-media-item").length).toBeGreaterThan(20);
   });
+});
+
+describe("Testimonial submission", () => {
+  afterEach(() => localStorage.clear());
+
+  it("opens the form, keeps the email private and confirms receipt", () => {
+    render(<App />);
+    fireEvent.click(screen.getByRole("button", { name: /Share your experience/ }));
+    const dialog = screen.getByRole("dialog", { name: "Share your experience" });
+    expect(within(dialog).getByText("Your email is never displayed")).toBeInTheDocument();
+    fireEvent.change(within(dialog).getByLabelText("Your name"), {
+      target: { value: "Amina Otieno" },
+    });
+    fireEvent.change(within(dialog).getByLabelText("Email address"), {
+      target: { value: "amina@example.com" },
+    });
+    fireEvent.change(within(dialog).getByLabelText("Your experience"), {
+      target: { value: "Practical, well-run ISO 27001 training." },
+    });
+    fireEvent.click(within(dialog).getByRole("checkbox"));
+    fireEvent.submit(
+      within(dialog)
+        .getByRole("button", { name: /Submit testimonial/ })
+        .closest("form")!,
+    );
+    expect(within(dialog).getByRole("status")).toHaveTextContent("Testimonial received");
+    fireEvent.click(within(dialog).getByRole("button", { name: "Close testimonial form" }));
+    expect(screen.queryByRole("dialog")).toBeNull();
+  });
+});
+
+describe("Tools", () => {
+  afterEach(() => window.history.pushState({}, "", "/"));
+
+  it("groups every tool under one Tools menu, starting with the Tools page", () => {
+    render(<App />);
+    const nav = screen.getByRole("navigation", { name: "Main navigation" });
+    expect(within(nav).queryByRole("link", { name: /^Travel Advisory/ })).toBeNull();
+    fireEvent.click(within(nav).getByRole("button", { name: "Tools" }));
+    const links = within(nav)
+      .getAllByRole("link")
+      .filter((link) => link.closest(".nav-dropdown.is-open"))
+      .map((link) => [link.textContent, link.getAttribute("href")]);
+    expect(links).toEqual([
+      ["All tools", "/tools/"],
+      ["Travel AdvisoryNew", "/travel-advisory/"],
+      ["Rwanda DPP Registration", "/rwanda-dpp-registration/"],
+      ["Certification Readiness & Implementation PlannerNew", "/certification-planner/"],
+    ]);
+    const footer = screen.getByRole("navigation", { name: "Footer navigation" });
+    expect(within(footer).getByRole("link", { name: "Tools" })).toHaveAttribute("href", "/tools/");
+  });
+
+  it("lists each tool on the Tools page with a way to open it and to ask an expert", () => {
+    render(<ToolsPage />);
+    expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent("Tools");
+    const section = screen.getByRole("region", { name: /tools, one place/ });
+    expect(within(section).getByRole("link", { name: /Open Travel Advisory/ })).toHaveAttribute(
+      "href",
+      "/travel-advisory/",
+    );
+    expect(
+      within(section).getByRole("link", { name: /Open Rwanda DPP Registration/ }),
+    ).toHaveAttribute("href", "/rwanda-dpp-registration/");
+    expect(within(section).getByText("More tools on the way")).toBeInTheDocument();
+  });
+
+  it("files each tool page under Tools and links to the other tools", () => {
+    render(<RwandaDppPage />);
+    const crumbs = screen.getByRole("navigation", { name: "Breadcrumb" });
+    expect(within(crumbs).getByRole("link", { name: "Tools" })).toHaveAttribute("href", "/tools/");
+    const strip = screen.getByRole("region", { name: "Explore our other tools" });
+    expect(within(strip).getByRole("link", { name: /Travel Advisory/ })).toHaveAttribute(
+      "href",
+      "/travel-advisory/",
+    );
+    expect(screen.queryByRole("region", { name: "Explore our other services" })).toBeNull();
+  });
+
+  it("keeps each tool selectable in the homepage callback form", () => {
+    window.history.pushState({}, "", "/?interest=Rwanda%20DPP%20Registration");
+    render(<App />);
+    expect(screen.getByLabelText("I’m interested in")).toHaveValue("Rwanda DPP Registration");
+  });
+
+  it("gives the tools their own workspace in the staff console", () => {
+    window.history.pushState({}, "", "/admin/#tool-pages");
+    render(<AdminPage />);
+    const tabs = screen.getByRole("tablist", { name: "Tools pages" });
+    expect(
+      within(tabs)
+        .getAllByRole("tab")
+        .map((tab) => tab.textContent),
+    ).toEqual([
+      "Tools page",
+      "Travel Advisory",
+      "Rwanda DPP Registration",
+      "Certification Planner",
+    ]);
+  });
+});
+
+describe("Certification Readiness & Implementation Planner", () => {
+  const profile = {
+    organisation: "Acme",
+    sector: "service",
+    country: "Kenya",
+    staff: 100,
+    sites: 1,
+    complexity: "medium",
+    existing: "none",
+    depth: "quick" as const,
+    goal: "First certification",
+    standards: ["27001"],
+  };
+  const firstChoices = Object.fromEntries(
+    durationQuestions.filter((q) => !q.detailed).map((q) => [q.id, q.choices[0]![0]]),
+  );
+
+  it("asks the shared and standard-specific questions for the chosen depth", () => {
+    expect(buildQuestions(profile)).toHaveLength(14);
+    expect(buildQuestions({ ...profile, depth: "detailed" })).toHaveLength(19);
+    expect(buildQuestions({ ...profile, standards: ["27001", "22301"] })).toHaveLength(17);
+  });
+
+  it("scores full evidence as advanced and no evidence as foundational", () => {
+    const all = (rating: number) =>
+      Object.fromEntries(buildQuestions(profile).map((q) => [q.id, rating]));
+    const best = computeReport(profile, all(3), firstChoices);
+    expect(best.score).toBe(100);
+    expect(best.status).toBe("Advanced: seek formal audit readiness review");
+    expect(best.priorities).toHaveLength(0);
+    const worst = computeReport(profile, all(0), firstChoices);
+    expect(worst.score).toBe(0);
+    expect(worst.status).toBe("Foundational: build core system");
+    expect(worst.priorities).toHaveLength(8);
+    expect(worst.internalDays[1]).toBeGreaterThan(best.internalDays[1]);
+    expect(worst.readinessMonths[0]).toBeGreaterThanOrEqual(2);
+  });
+
+  it("walks from organisation details to a readiness report", () => {
+    const { container } = render(<CertificationPlannerPage />);
+    const crumbs = screen.getByRole("navigation", { name: "Breadcrumb" });
+    expect(within(crumbs).getByRole("link", { name: "Tools" })).toHaveAttribute("href", "/tools/");
+
+    fireEvent.click(screen.getByRole("checkbox", { name: /ISO\/IEC 27001:2022/ }));
+    fireEvent.click(screen.getByRole("button", { name: /Start assessment/ }));
+    expect(screen.getByRole("alert")).toHaveTextContent("Select at least one standard.");
+    fireEvent.click(screen.getByRole("checkbox", { name: /ISO 22301:2019/ }));
+    fireEvent.click(screen.getByRole("button", { name: /Start assessment/ }));
+
+    const generate = screen.getByRole("button", { name: /Generate readiness report/ });
+    expect(generate).toBeDisabled();
+    expect(screen.getByText("0 / 24 answered")).toBeInTheDocument();
+    for (const group of container.querySelectorAll("fieldset.cp-question"))
+      fireEvent.click(group.querySelector("input")!);
+    expect(generate).toBeEnabled();
+    fireEvent.click(generate);
+
+    expect(
+      screen.getByRole("heading", { name: "Management system readiness report" }),
+    ).toBeInTheDocument();
+    expect(container.querySelector(".cp-metrics .is-primary dd")).toHaveTextContent("0%");
+    expect(screen.getByRole("status")).toHaveTextContent("Foundational: build core system");
+    expect(screen.getAllByText("Critical readiness check").length).toBeGreaterThan(0);
+
+    const quote = screen.getByRole("region", { name: "Request a tailored quotation" });
+    fireEvent.click(within(quote).getByRole("button", { name: /Prepare quotation request/ }));
+    expect(within(quote).getByRole("alert")).toHaveTextContent("Enter your organisation name.");
+  }, 15_000);
 });

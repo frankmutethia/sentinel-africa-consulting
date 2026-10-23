@@ -1,4 +1,4 @@
-/* Automation Tools page. Shared service blocks live in services.css. */
+/* Our Software Products page. Shared service blocks live in services.css. */
 
 /* A product screenshot inside a simple browser window. */
 .tools-browser {
@@ -75,7 +75,8 @@
 .tools-showcase:hover .tools-showcase-layer.is-layer-1 {
   transform: translate(17%, -10%) scale(0.76);
 }
-.tools-powered {
+/* Standards the products cover, pinned under the screenshots. */
+.tools-standards {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -83,18 +84,20 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 10px 18px;
+  padding: 11px 20px;
   border: 1px solid var(--line);
   border-radius: 999px;
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--muted);
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--navy);
   background: #fff;
   box-shadow: 0 14px 34px #102d3e1a;
 }
-.tools-powered img {
-  width: 92px;
-  height: auto;
+.tools-standards i {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--green);
 }
 
 /* Path: assess, implement, connect */
@@ -242,5 +245,68 @@
   .tools-path a,
   .tools-path-arrow {
     transition: none;
+  }
+}
+
+/* "Who it’s for" note on each product. */
+.tools-audience {
+  display: grid;
+  gap: 4px;
+  max-width: 68ch;
+  margin-bottom: 24px;
+  padding: 14px 16px;
+  border-left: 3px solid var(--green);
+  border-radius: 0 10px 10px 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #3f525c;
+  background: #fff;
+}
+.tools-product.is-reversed .tools-audience {
+  background: var(--pale);
+}
+.tools-audience strong {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--blue);
+}
+
+/* Implementation and support */
+.tools-support {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+.tools-support li {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 26px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fff;
+}
+.tools-support h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+.tools-support p {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: #3f525c;
+}
+.tools-support .text-link {
+  margin-top: auto;
+}
+@media (max-width: 1100px) {
+  .tools-support {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 640px) {
+  .tools-support {
+    grid-template-columns: minmax(0, 1fr);
   }
 }

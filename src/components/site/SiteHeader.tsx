@@ -1,19 +1,10 @@
 import { useEffect, useRef, useState } from "react";
-import {
-  ArrowUpRight,
-  ChevronDown,
-  LockKeyhole,
-  Menu,
-  ShoppingCart,
-  UserRound,
-  X,
-} from "lucide-react";
+import { ArrowUpRight, ChevronDown, LockKeyhole, Menu, X } from "lucide-react";
 import sentinelLogo from "@/assets/logos/SENTINEL-AFRICA-LOGO-2023.png";
 import {
   headerNavigation,
   homeSection,
   serviceNavigation,
-  shopPage,
   staffLoginPage,
   type NavigationLink,
 } from "./navigation";
@@ -160,7 +151,10 @@ export function SiteHeader({ base = "" }: { base?: string }) {
                   onClick={closeMenus}
                   aria-current={isCurrent(link.href) ? "page" : undefined}
                 >
-                  {link.label}
+                  <span className="nav-link-label">
+                    {link.label}
+                    {link.badge && <small className="nav-badge">{link.badge}</small>}
+                  </span>
                   <ArrowUpRight size={13} aria-hidden="true" />
                 </a>
               ) : (
@@ -184,14 +178,7 @@ export function SiteHeader({ base = "" }: { base?: string }) {
               </a>
             ))}
           </nav>
-          <nav className="utility-commerce" aria-label="Shop and account">
-            <a href={shopPage}>Shop</a>
-            <span aria-disabled="true" aria-label="Shopping cart (coming soon)" title="Coming soon">
-              <ShoppingCart size={14} />
-            </span>
-            <span aria-disabled="true" aria-label="My account (coming soon)" title="Coming soon">
-              <UserRound size={14} />
-            </span>
+          <nav className="utility-commerce" aria-label="Staff access">
             <a className="staff-login" href={staffLoginPage}>
               <LockKeyhole size={12} aria-hidden="true" />
               Staff Login

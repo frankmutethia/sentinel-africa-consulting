@@ -129,42 +129,4 @@ export const extendedEditors: ContentEditorDef[] = [
       },
     ],
   },
-  {
-    id: "products",
-    overline: "Content library",
-    title: "Shop products",
-    description:
-      "Manage commercial offerings separately from course descriptions and customer orders.",
-    pages: [
-      {
-        id: "products",
-        label: "Shop products",
-        url: "/shop/",
-        blocks: [
-          {
-            id: "items",
-            label: "Products",
-            description:
-              "Pricing and availability drafts. This does not enable checkout or payments.",
-            source: "layout",
-            fields: [
-              list("items", "Products", "Product", [
-                text("title", "Product name"),
-                text("sku", "Product code"),
-                text("course", "Related course identifier"),
-                body("description", "Description"),
-                image("image", "Product image"),
-                text("imageAlt", "Image description"),
-                text("price", "Price"),
-                text("currency", "Currency"),
-                body("includes", "What is included"),
-                body("delivery", "Delivery instructions"),
-                { key: "available", label: "Available when published", type: "toggle" },
-              ]),
-            ],
-          },
-        ],
-      },
-    ],
-  },
 ];

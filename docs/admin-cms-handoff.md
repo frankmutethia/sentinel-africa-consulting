@@ -25,9 +25,9 @@ The public site remains a Vite/React/TypeScript multi-page static site. Do not a
 
 Homepage owns hero, alliances introduction, company introduction, service highlights, contact introduction, client introduction and testimonial introduction. Partners, clients and testimonials are shared collections referenced by ID. About Us covers Who We Are, How We Do It, Why We Do It, Board and Team. Alliances and Clients currently link to homepage anchors rather than separate public pages.
 
-Our Services covers Consultancy, Managed Services, Training, Cybershield, Automation Tools and Rwanda DPP Registration. Resources covers Shop, Blog, SDG Commitment and Travel Advisory page content. Careers covers recruitment and Talent Shield. Upcoming and FAQ have authoring designs but their public pages are not yet built. Preserve that distinction when integrating.
+Our Services covers Consultancy, Managed Services, Training, Cybershield and Our Software Products. Resources covers Blog, SDG Commitment and Travel Advisory page content. Careers covers recruitment and Talent Shield. Upcoming and FAQ have authoring designs but their public pages are not yet built. Preserve that distinction when integrating.
 
-Maintain articles, people, alliance/client organisations, testimonials, courses, events/sessions, products and jobs once. Products reference courses; sessions reference courses; bookings reference sessions. Keep incoming feedback private until editorial approval and publication permission create a testimonial. Keep job applications and Talent Shield applications in separate workflows.
+Maintain articles, people, alliance/client organisations, testimonials, courses, events/sessions and jobs once. Sessions reference courses; bookings reference sessions. Keep incoming feedback private until editorial approval and publication permission create a testimonial. Keep job applications and Talent Shield applications in separate workflows.
 
 ## Proposed content API
 
@@ -85,7 +85,7 @@ Page records need `id`, `slug`, `schemaVersion`, `draftRevision`, `publishedRevi
 | GET / POST    | `/api/admin/staff`              | Accounts / invite staff                                     |
 | PATCH         | `/api/admin/staff/:id`          | Roles and account state                                     |
 
-`kind` is an allowlisted enum: enquiries, feedback, job-applications, talent-applications, bookings. Shop orders must be created/updated from checkout and verified payment events, not arbitrary browser status changes. Payment integration needs a separate contract; this prototype does not process payments or send emails.
+`kind` is an allowlisted enum: enquiries, feedback, job-applications, talent-applications, bookings. Payment integration needs a separate contract; this prototype does not process payments or send emails.
 
 ## Required integration behavior
 

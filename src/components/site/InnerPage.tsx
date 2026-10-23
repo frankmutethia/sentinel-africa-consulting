@@ -21,8 +21,8 @@ export function InnerPage({ children }: { children: ReactNode }) {
 }
 
 interface PageHeroProps {
-  /** Breadcrumb labels between Home and the current page. */
-  trail: string[];
+  /** Breadcrumb steps between Home and the current page; a step with `href` is a link. */
+  trail: (string | { label: string; href: string })[];
   eyebrow: string;
   title: string;
   lead: ReactNode;
@@ -39,11 +39,17 @@ export function PageHero({ trail, eyebrow, title, lead, actions, aside }: PageHe
         <div className="page-hero-copy">
           <nav aria-label="Breadcrumb" className="page-breadcrumb">
             <a href={homeSection("/", "top")}>Home</a>
-            {trail.map((crumb) => (
-              <span key={crumb}>
-                <span aria-hidden="true">/</span> {crumb}
-              </span>
-            ))}
+            {trail.map((crumb) =>
+              typeof crumb === "string" ? (
+                <span key={crumb}>
+                  <span aria-hidden="true">/</span> {crumb}
+                </span>
+              ) : (
+                <span key={crumb.label}>
+                  <span aria-hidden="true">/</span> <a href={crumb.href}>{crumb.label}</a>
+                </span>
+              ),
+            )}
             <span aria-current="page">
               <span aria-hidden="true">/</span> {title}
             </span>

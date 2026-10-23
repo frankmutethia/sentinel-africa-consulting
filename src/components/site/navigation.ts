@@ -7,7 +7,6 @@ export const howWeDoItPage = "/how-we-do-it/";
 export const whyWeDoItPage = "/why-we-do-it/";
 export const boardPage = "/board/";
 export const teamPage = "/team/";
-export const shopPage = "/shop/";
 export const blogPage = "/blog/";
 export const sdgPage = "/our-sdgs-commitment/";
 export const travelAdvisoryPage = "/travel-advisory/";
@@ -31,9 +30,52 @@ export const servicePages = [
   { label: "Managed Services", href: "/managed-services/" },
   { label: "Training", href: "/training/" },
   { label: "Cybershield", href: "/cybershield/" },
-  { label: "Automation Tools", href: "/automation-tools/" },
-  { label: "Rwanda DPP Registration", href: "/rwanda-dpp-registration/" },
+  { label: "Our Software Products", href: "/software-products/" },
 ] as const;
+
+export const toolsPage = "/tools/";
+
+/**
+ * Self-service tools, listed together under the Tools menu and on the Tools page.
+ * To add a tool: build its page, add it to vite.config.ts and add one entry here.
+ */
+export const toolPages: {
+  label: string;
+  href: string;
+  /** Short category shown on the tool's card. */
+  category: string;
+  summary: string;
+  /** Option pre-selected in the homepage callback form when visitors ask about this tool. */
+  interest: string;
+  badge?: string;
+}[] = [
+  {
+    label: "Travel Advisory",
+    href: travelAdvisoryPage,
+    category: "Travel risk",
+    summary:
+      "Check official Ebola-related advisories and travel requirements for every country on your route, reviewed by Sentinel Africa editors.",
+    interest: travelInterest,
+    badge: "New",
+  },
+  {
+    label: "Rwanda DPP Registration",
+    href: "/rwanda-dpp-registration/",
+    category: "Data protection compliance",
+    summary:
+      "Find out whether you must register as a data controller or processor under Rwanda’s data protection law, and fast-track your registration.",
+    interest: "Rwanda DPP Registration",
+  },
+  {
+    label: "Certification Readiness & Implementation Planner",
+    href: "/certification-planner/",
+    category: "ISO certification",
+    summary:
+      "Score your readiness for ISO 27001, 22301, 9001, 27701, 42001 and more, and estimate the time, people and effort needed to get certified.",
+    interest: "ISO Certification Readiness",
+    badge: "New",
+  },
+];
 
 /** Links to a homepage section; `base` is "" on the homepage and "/" on other pages. */
 export const homeSection = (base: string, id: string) => `${base}#${id}`;
@@ -67,12 +109,17 @@ export const headerNavigation = (base = ""): NavigationItem[] => [
   {
     label: "Resources",
     children: [
-      { label: "Shop", href: shopPage },
       { label: "Blog", href: blogPage },
       { label: "Our SDG’s Commitment", href: sdgPage },
     ],
   },
-  { label: "Travel Advisory", href: travelAdvisoryPage, badge: "New" },
+  {
+    label: "Tools",
+    children: [
+      { label: "All tools", href: toolsPage },
+      ...toolPages.map(({ label, href, badge }) => ({ label, href, ...(badge && { badge }) })),
+    ],
+  },
   { label: "Upcoming" },
   {
     label: "Careers",

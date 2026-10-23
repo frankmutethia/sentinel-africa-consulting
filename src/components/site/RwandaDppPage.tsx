@@ -18,9 +18,9 @@ import banner from "@/assets/services/dpp-banner.jpg";
 import bannerVideo from "@/assets/services/dpp-banner-video.mp4";
 import bannerVideoPoster from "@/assets/services/dpp-banner-video-poster.jpg";
 import { InnerPage, PageCta, PageHero } from "./InnerPage";
-import { contactLink } from "./navigation";
+import { contactLink, toolsPage } from "./navigation";
 import { Reveal } from "./Reveal";
-import { OtherServices, SectionHeading } from "./ServiceBlocks";
+import { OtherTools, SectionHeading } from "./ServiceBlocks";
 import "./rwanda-dpp.css";
 
 // Sentinel Africa's own questionnaire, hosted on Zoho Forms.
@@ -104,7 +104,7 @@ export default function RwandaDppPage() {
   return (
     <InnerPage>
       <PageHero
-        trail={["Our Services"]}
+        trail={[{ label: "Tools", href: toolsPage }]}
         eyebrow="Your Fast-Track to Compliance!"
         title="Rwanda DPP Registration"
         lead={
@@ -361,7 +361,7 @@ export default function RwandaDppPage() {
         </div>
       </section>
 
-      <OtherServices current="Rwanda DPP Registration" />
+      <OtherTools current="Rwanda DPP Registration" />
 
       <PageCta interest="Rwanda DPP Registration" />
     </InnerPage>

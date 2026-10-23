@@ -2,7 +2,7 @@ import { useState, type ReactNode } from "react";
 import { ArrowUpRight, Info, Search, type LucideIcon } from "lucide-react";
 
 // Lists of what visitors send through the website: callback requests, job applications,
-// course bookings and shop orders. They fill in once a form service stores submissions.
+// and course bookings. They fill in once a form service stores submissions.
 
 export interface InboxDef {
   id: string;
@@ -35,7 +35,6 @@ export function InboxView({ inbox }: { inbox: InboxDef }) {
       label: "Edit Talent Shield programme",
     },
     bookings: { href: "#courses", label: "Manage training courses" },
-    orders: { href: "#products", label: "Manage shop products" },
   };
   const related = contentLinks[inbox.id];
 

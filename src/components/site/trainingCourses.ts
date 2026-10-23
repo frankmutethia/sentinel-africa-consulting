@@ -3,7 +3,7 @@ import bcmArt from "@/assets/services/training-bcm.png";
 import ermArt from "@/assets/services/training-erm.png";
 import privacyArt from "@/assets/services/training-privacy.png";
 
-/** Certification courses by training area, shared by the Training and Shop pages. */
+/** Certification courses by training area, shown on the Training page. */
 export const courseAreas = [
   {
     id: "ism",

@@ -11,7 +11,8 @@ export const offices = [
   {
     name: "Rwanda",
     label: "Kigali office",
-    address: "Plot: KG688 Street, Kacyiru, Kigali, Rwanda",
+    address:
+      "YYUSSA City Center, Tower A, 9th Floor, KN 4 Avenue, Kiyovu, Nyarugenge, Kigali, Rwanda",
     phones: ["+250 782 746 073"],
     email: "info.rw@sentinelafricaconsulting.com",
   },

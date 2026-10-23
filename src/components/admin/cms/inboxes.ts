@@ -1,5 +1,5 @@
-import { CalendarCheck, FileUser, Inbox, ShoppingBag, UserCog, UserPlus } from "lucide-react";
-import { careersPage, contactLink, shopPage } from "../../site/navigation";
+import { CalendarCheck, FileUser, Inbox, UserCog, UserPlus } from "lucide-react";
+import { careersPage, contactLink } from "../../site/navigation";
 import type { InboxDef } from "./InboxView";
 
 export const inboxes: InboxDef[] = [
@@ -65,16 +65,6 @@ export const inboxes: InboxDef[] = [
       "Training requests currently reach the team through the callback form with “Training” chosen. Bookings appear here once online booking is connected.",
     columns: ["Delegate", "Organisation", "Course", "Format", "Session", "Payment"],
     statuses: ["Pending", "Confirmed", "Paid", "Cancelled"],
-  },
-  {
-    id: "orders",
-    title: "Shop orders",
-    description: "Self-study course purchases from the shop and their fulfilment.",
-    icon: ShoppingBag,
-    source: { label: "View Shop", url: shopPage },
-    today: "Online checkout is not connected yet. Orders appear here once payments are set up.",
-    columns: ["Order", "Customer", "Course", "Amount", "Date", "Status"],
-    statuses: ["Pending", "Paid", "Fulfilled", "Refunded"],
   },
   {
     id: "staff",

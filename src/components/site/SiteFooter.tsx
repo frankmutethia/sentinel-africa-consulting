@@ -1,6 +1,6 @@
 import { ArrowUpRight, Globe2 } from "lucide-react";
 import sentinelLogo from "@/assets/logos/SENTINEL-AFRICA-LOGO-2023.png";
-import { careersPage, homeSection, travelAdvisoryPage, whoWeArePage } from "./navigation";
+import { careersPage, homeSection, toolsPage, whoWeArePage } from "./navigation";
 import { offices } from "@/content/offices";
 
 /** `base` is "" on the homepage and "/" on other pages, so section links reach the homepage. */
@@ -11,7 +11,7 @@ export function SiteFooter({ base = "" }: { base?: string }) {
     { label: "Services", href: homeSection(base, "services") },
     { label: "Clients", href: homeSection(base, "clients") },
     { label: "Testimonials", href: homeSection(base, "testimonials") },
-    { label: "Travel Advisory", href: travelAdvisoryPage },
+    { label: "Tools", href: toolsPage },
     { label: "Careers", href: careersPage },
     { label: "Contact us", href: homeSection(base, "contact") },
   ];

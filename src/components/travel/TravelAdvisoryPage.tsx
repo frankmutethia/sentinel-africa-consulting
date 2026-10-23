@@ -23,8 +23,9 @@ import {
   UserCheck,
 } from "lucide-react";
 import { InnerPage, PageCta, PageHero } from "../site/InnerPage";
-import { contactLink, staffLoginPage, travelInterest } from "../site/navigation";
+import { contactLink, staffLoginPage, toolsPage, travelInterest } from "../site/navigation";
 import { Reveal } from "../site/Reveal";
+import { OtherTools } from "../site/ServiceBlocks";
 import {
   buildReport,
   formatDate,
@@ -550,7 +551,7 @@ export default function TravelAdvisoryPage() {
   return (
     <InnerPage>
       <PageHero
-        trail={["Resources"]}
+        trail={[{ label: "Tools", href: toolsPage }]}
         eyebrow="Travel Risk Intelligence"
         title="Travel Advisory"
         lead={
@@ -971,6 +972,8 @@ export default function TravelAdvisoryPage() {
           </div>
         </div>
       </section>
+
+      <OtherTools current="Travel Advisory" />
 
       <PageCta interest={travelInterest} />
     </InnerPage>

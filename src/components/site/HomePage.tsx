@@ -17,7 +17,7 @@ import { TestimonialSubmission } from "./TestimonialSubmission";
 import { FormattedText } from "./FormattedText";
 import { homepage } from "@/content/homepageDemo";
 import { Alliances, Clients } from "./BrandSections";
-import { servicePages, travelInterest } from "./navigation";
+import { servicePages, toolPages } from "./navigation";
 import { Reveal } from "./Reveal";
 import { SiteFooter } from "./SiteFooter";
 import { WhatsAppWidget } from "./WhatsAppWidget";
@@ -37,7 +37,10 @@ const serviceIcons: Record<ServiceIcon, typeof ShieldCheck> = {
   target: Target,
 };
 
-const practiceAreas = [...servicePages.map((page) => page.label), travelInterest];
+const practiceAreas = [
+  ...servicePages.map((page) => page.label),
+  ...toolPages.map((tool) => tool.interest),
+];
 
 /** A dropdown choice passed from another page as `?interest=…` (see contactLink). */
 function interestFromUrl() {

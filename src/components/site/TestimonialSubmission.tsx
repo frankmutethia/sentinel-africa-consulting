@@ -8,6 +8,8 @@ function SubmissionDialog({ onClose }: { onClose: () => void }) {
   useEffect(() => {
     const previous = document.activeElement as HTMLElement | null;
     dialog.current?.showModal?.();
+    // Start on the first field rather than the close button.
+    dialog.current?.querySelector<HTMLInputElement>("input[name=name]")?.focus();
     return () => previous?.focus();
   }, []);
   function submit(event: FormEvent<HTMLFormElement>) {
@@ -51,98 +53,134 @@ function SubmissionDialog({ onClose }: { onClose: () => void }) {
       aria-labelledby="testimonial-form-title"
       onCancel={onClose}
     >
-      <button
-        type="button"
-        className="testimonial-close"
-        aria-label="Close testimonial form"
-        onClick={onClose}
-      >
-        <X size={22} />
-      </button>
-      <span className="testimonial-form-icon">{saved ? <Check /> : <MessageSquareQuote />}</span>
-      <p className="eyebrow">Your experience matters</p>
-      <h2 id="testimonial-form-title">
-        {saved ? "Thank you for sharing." : "Share your experience"}
-      </h2>
-      {saved ? (
-        <div role="status">
-          <p>
-            Your testimonial has been saved in this browser for this design preview. It has not been
-            sent or published.
+      <div className="testimonial-shell">
+        <aside className="testimonial-aside">
+          <span className="testimonial-form-icon">
+            {saved ? <Check size={22} /> : <MessageSquareQuote size={22} />}
+          </span>
+          <p className="testimonial-kicker">Your experience matters</p>
+          <h2 id="testimonial-form-title">
+            {saved ? "Thank you for sharing." : "Share your experience"}
+          </h2>
+          <p className="testimonial-aside-lead">
+            Tell us how working with Sentinel Africa made a difference.
           </p>
-          <button className="button" onClick={onClose}>
-            Back to testimonials
+          <ul className="testimonial-points">
+            {[
+              "Reviewed by our team before it appears",
+              "Your email is never displayed",
+              "Published only with your consent",
+            ].map((point) => (
+              <li key={point}>
+                <Check size={14} aria-hidden="true" />
+                {point}
+              </li>
+            ))}
+          </ul>
+        </aside>
+
+        <div className="testimonial-main">
+          <button
+            type="button"
+            className="testimonial-close"
+            aria-label="Close testimonial form"
+            onClick={onClose}
+          >
+            <X size={18} />
           </button>
-        </div>
-      ) : (
-        <>
-          <p>
-            Tell us how working with Sentinel Africa made a difference. Testimonials are reviewed
-            before appearing on our website.
-          </p>
-          <form onSubmit={submit}>
-            <div className="testimonial-form-row">
-              <label>
-                Your name{" "}
-                <input
-                  name="name"
-                  autoComplete="name"
-                  required
-                  maxLength={120}
-                  placeholder="Full name"
-                />
-              </label>
-              <label>
-                Role / organisation <span>(optional)</span>
-                <input
-                  name="role"
-                  autoComplete="organization"
-                  maxLength={180}
-                  placeholder="Your role or organisation"
-                />
-              </label>
-            </div>
-            <label>
-              Email address{" "}
-              <input
-                name="email"
-                type="email"
-                autoComplete="email"
-                required
-                maxLength={254}
-                placeholder="you@example.com"
-              />
-              <small>For follow-up only. Your email will not be displayed.</small>
-            </label>
-            <label>
-              Your experience{" "}
-              <textarea
-                name="quote"
-                required
-                minLength={20}
-                maxLength={2000}
-                rows={5}
-                placeholder="What did you value about our services or training?"
-              />
-              <small>20–2,000 characters.</small>
-            </label>
-            <label className="testimonial-consent">
-              <input name="consent" type="checkbox" required />
-              <span>
-                I agree to Sentinel Africa displaying my testimonial, name and role on its website
-                after review.
+          {saved ? (
+            <div className="testimonial-done" role="status">
+              <span className="testimonial-done-icon">
+                <Check size={26} aria-hidden="true" />
               </span>
-            </label>
-            {error && <p role="alert">{error}</p>}
-            <button type="submit" className="button">
-              Submit testimonial <ArrowUpRight size={18} />
-            </button>
-            <p className="testimonial-demo-note">
-              Design preview: feedback is saved only in this browser.
-            </p>
-          </form>
-        </>
-      )}
+              <p className="testimonial-done-title">Testimonial received</p>
+              <p>
+                It has been saved in this browser for this design preview. It has not been sent or
+                published.
+              </p>
+              <button className="button" onClick={onClose}>
+                Back to testimonials
+              </button>
+            </div>
+          ) : (
+            <form onSubmit={submit}>
+              <div className="testimonial-form-row">
+                <label>
+                  <span className="testimonial-label">Your name</span>
+                  <input
+                    name="name"
+                    autoComplete="name"
+                    required
+                    maxLength={120}
+                    placeholder="Full name"
+                  />
+                </label>
+                <label>
+                  <span className="testimonial-label">
+                    Role or organisation <em>Optional</em>
+                  </span>
+                  <input
+                    name="role"
+                    autoComplete="organization"
+                    maxLength={180}
+                    placeholder="e.g. Head of IT, KCB"
+                  />
+                </label>
+              </div>
+              <div className="testimonial-field">
+                <label htmlFor="testimonial-email" className="testimonial-label">
+                  Email address
+                </label>
+                <input
+                  id="testimonial-email"
+                  name="email"
+                  type="email"
+                  autoComplete="email"
+                  required
+                  maxLength={254}
+                  placeholder="you@example.com"
+                  aria-describedby="testimonial-email-hint"
+                />
+                <small id="testimonial-email-hint">For follow-up only. Never displayed.</small>
+              </div>
+              <div className="testimonial-field">
+                <label htmlFor="testimonial-quote" className="testimonial-label">
+                  Your experience
+                </label>
+                <textarea
+                  id="testimonial-quote"
+                  name="quote"
+                  required
+                  minLength={20}
+                  maxLength={2000}
+                  rows={4}
+                  placeholder="What did you value about our services or training?"
+                  aria-describedby="testimonial-quote-hint"
+                />
+                <small id="testimonial-quote-hint">20–2,000 characters.</small>
+              </div>
+              <label className="testimonial-consent">
+                <input name="consent" type="checkbox" required />
+                <span>
+                  I agree to Sentinel Africa displaying my testimonial, name and role on its website
+                  after review.
+                </span>
+              </label>
+              {error && (
+                <p className="testimonial-error" role="alert">
+                  {error}
+                </p>
+              )}
+              <div className="testimonial-actions">
+                <button type="submit" className="button">
+                  Submit testimonial <ArrowUpRight size={18} />
+                </button>
+                <p className="testimonial-demo-note">Design preview: saved only in this browser.</p>
+              </div>
+            </form>
+          )}
+        </div>
+      </div>
     </dialog>
   );
 }
